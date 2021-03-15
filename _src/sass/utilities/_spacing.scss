@@ -1,7 +1,9 @@
-.#{$prefix}-flow-16 > :not(:last-child) {
-  margin-bottom: $spacing-16;
-}
+.#{$prefix} {
+  &-flow-16 > :not(:last-child) {
+    margin-bottom: $spacing-16;
+  }
 
-.#{$prefix}-stack-16 {
-  margin-bottom: $spacing-16;
+  &-stack-16 {
+    margin-bottom: $spacing-16;
+  }
 }

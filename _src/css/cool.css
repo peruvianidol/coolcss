@@ -19,36 +19,27 @@
 .cool-styles:focus-within {
   scroll-behavior: smooth;
 }
-
 .cool-styles a[class] {
   text-decoration: none;
 }
-
 .cool-styles a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-
 .cool-styles ul[class],
 .cool-styles ol[class] {
   list-style: none;
 }
-
 .cool-styles img,
 .cool-styles picture {
   max-width: 100%;
   display: block;
 }
-
 .cool-styles code,
 .cool-styles pre {
   font-family: monospace;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cool-styles:focus-within {
-    scroll-behavior: auto;
-  }
-
   .cool-styles *,
 .cool-styles *::before,
 .cool-styles *::after {
@@ -57,13 +48,15 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  .cool-styles:focus-within {
+    scroll-behavior: auto;
+  }
 }
 .cool-styles {
   font-family: sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
 }
-
 .cool-styles figure img {
   width: 100%;
 }
@@ -76,11 +69,9 @@
 .cool-styles label [type=radio] + span {
   font-weight: 400;
 }
-
 .cool-styles fieldset {
   border: 0;
 }
-
 .cool-styles legend {
   font-weight: 600;
 }
@@ -96,7 +87,6 @@
 .cool-flow-16 > :not(:last-child) {
   margin-bottom: 1rem;
 }
-
 .cool-stack-16 {
   margin-bottom: 1rem;
 }

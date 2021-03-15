@@ -4,8 +4,8 @@
   font-family: $font-family;
   font-size: $text-medium-font-size;
   line-height: $text-medium-line-height;
-}
 
-.#{$prefix}-styles figure img {
-  width: 100%;
+  figure img {
+    width: 100%;
+  }
 }

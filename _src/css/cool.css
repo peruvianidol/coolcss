@@ -1,1 +1,39 @@
+.cool-styles,
+.cool-styles *,
+.cool-styles *::before,
+.cool-styles *::after {
+  box-sizing: border-box;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  margin: unset;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
 
+.cool-styles {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.cool-stack-16 > :not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.cool-layout-single-column {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+.cool-layout-single-column [data-grid-area=header],
+.cool-layout-single-column [data-grid-area=main],
+.cool-layout-single-column [data-grid-area=footer] {
+  padding: 1rem;
+}
+.cool-layout-single-column article {
+  max-width: 75ch;
+}

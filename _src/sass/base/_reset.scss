@@ -1,0 +1,13 @@
+.#{$prefix}-styles,
+.#{$prefix}-styles *,
+.#{$prefix}-styles *::before,
+.#{$prefix}-styles *::after {
+  box-sizing: border-box;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  margin: unset;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}

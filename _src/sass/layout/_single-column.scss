@@ -1,0 +1,18 @@
+.#{$prefix}-layout-single-column {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
+  [data-grid-area="header"],
+  [data-grid-area="main"],
+  [data-grid-area="footer"] {
+    padding: $spacing-16;
+  }
+
+  article {
+    max-width: $max-line-length;
+  }
+}
+

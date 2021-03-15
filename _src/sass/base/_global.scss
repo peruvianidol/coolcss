@@ -1,0 +1,7 @@
+// Add this class to the <body> or the next highest element in the DOM containing your styles.
+
+.#{$prefix}-styles {
+  font-family: $font-family;
+  font-size: $text-medium-font-size;
+  line-height: $text-medium-line-height;
+}

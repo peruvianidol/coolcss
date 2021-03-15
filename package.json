@@ -1,0 +1,31 @@
+{
+  "name": "coolcss.dev",
+  "version": "1.0.0",
+  "description": "The last CSS framework I'll (hopefully) ever need to build.",
+  "main": "index.html",
+  "scripts": {
+    "watch:sass": "sass --no-source-map --watch _src/sass:_src/css",
+    "watch:css": "postcss _src/css/*.css --watch -u autoprefixer --dir _site/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:sass": "sass --no-source-map _src/sass:_src/css",
+    "build:eleventy": "eleventy",
+    "postbuild": "postcss _site/css/*.css -r -u autoprefixer cssnano",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
+  },
+  "keywords": [],
+  "author": "Mike Aparicio <peruvianidol@gmail.com> (http://mikeaparicio.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "autoprefixer": "^10.0.4",
+    "cssnano": "^4.1.10",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.0",
+    "postcss-cli": "^8.1.0",
+    "sass": "^1.26.10"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

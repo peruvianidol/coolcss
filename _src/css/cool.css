@@ -29,6 +29,9 @@
 .cool-styles ol[class] {
   list-style: none;
 }
+.cool-styles dt {
+  font-weight: 600;
+}
 .cool-styles img,
 .cool-styles picture {
   max-width: 100%;
@@ -57,7 +60,8 @@
   font-size: 1rem;
   line-height: 1.5rem;
 }
-.cool-styles figure img {
+.cool-styles figure img,
+.cool-styles figure video {
   width: 100%;
 }
 

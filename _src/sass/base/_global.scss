@@ -5,7 +5,8 @@
   font-size: $text-medium-font-size;
   line-height: $text-medium-line-height;
 
-  figure img {
+  figure img,
+  figure video {
     width: 100%;
   }
 }

@@ -6,4 +6,44 @@
   <h3>Just what the world needs&mdash;another fucking CSS framework!</h3>
 
   <p>Yes, I know. I feel the same way.</p>
+  
+  <p>Dave Rupert once advocated for <a href="https://daverupert.com/2013/04/responsive-deliverables/">tiny Bootstraps, for every client</a>, which is something that stuck with me. Why use a CSS framework that's going to add a bunch of stuff you're not going to use and require customizations and overrides on top of a bunch of new styles that are specific to your needs?</p>
+
+  <p>This is why I've made custom CSS frameworks for every project, including three CSS frameworks at Groupon for their consumer, merchant and internal tools products.</p>
+
+  <p>As I've dived deeper into design systems work, I wanted a to support those systems with a CSS framework that was:</p>
+
+  <ul>
+    <li>Lightweight</li>
+    <li>Stack agnostic</li>
+    <li>Easy to use</li>
+    <li>Easy to maintain</li>
+    <li>Fully customizable/themable</li>
+    <li>Baked in some accessibility</li>
+    <li>Required little to no page/app-specific CSS to be written by developers</li>
+  </ul>
+
+  <h3>The COOL Methodology</h3>
+
+  <p>Each new framework I had made over the years built on hard lessons learned from the last. One of the biggest issues that always eluded me was that no matter how good I made the framework, developers would always build their own styles on top of the framework, to varying degrees of success.</p>
+
+  <p>Any time a new feature was designed, the product and engineering teams would look to the CSS framework to support the visual styles, bloating the framework, blocking engineering teams, and making it harder to maintain.</p>
+
+
+  <dl>
+    <dt>Component Styles</dt>
+    <dd class="cool-stack-16">Individual components are styled to be used in any context.</dd>
+
+    <dt>Utility Styles <span>(The OO in COOL)</span></dt>
+    <dd class="cool-stack-16">These single-purpose classes allow you to compose multiple components in any number of ways without having to re-declare styles in different contexts.</dd>
+
+    <dt>Layout Styles</dt>
+    <dd class="cool-stack-16">Rather than using a generic 12-column grid, a number of pre-defined layouts are provided (using CSS grid) that can be used to organize pages of content.</dd>
+  </dl>
+
+  <figure>
+    <video preload="auto" aria-label="Embedded video" src="/images/coolcss.mp4" poster="/images/coolcss.jpg" type="video/mp4" autoplay disablePictureInPicture loop></video>
+    <figcaption>This incredible GIF by <a href="https://twitter.com/CoreyGinnivan/status/1074287131374145536">Corey Ginnivan</a></figcaption>
+  </figure>
+
 </article>

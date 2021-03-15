@@ -6,8 +6,56 @@
   background-origin: border-box;
   background-repeat: no-repeat;
   margin: unset;
+  padding: unset;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+}
+
+.#{$prefix}-styles {
+  text-rendering: optimizeSpeed;
+
+  &:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+.#{$prefix}-styles a[class] {
+  text-decoration: none;
+}
+
+.#{$prefix}-styles a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+.#{$prefix}-styles ul[class],
+.#{$prefix}-styles ol[class] {
+  list-style: none;
+}
+
+.#{$prefix}-styles img,
+.#{$prefix}-styles picture {
+  max-width: 100%;
+  display: block;
+}
+
+.#{$prefix}-styles code,
+.#{$prefix}-styles pre {
+  font-family: monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .#{$prefix}-styles:focus-within {
+    scroll-behavior: auto;
+  }
+
+  .#{$prefix}-styles *,
+  .#{$prefix}-styles *::before,
+  .#{$prefix}-styles *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

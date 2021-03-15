@@ -1,3 +1,211 @@
 ---
 title: Kitchen Sink
 ---
+
+<article class="cool-flow-16">
+  <p>This page will help me style all the default elements in <strong>cool.css</strong>. Eventually I'll add other components like tabs and modals.</p>
+
+  <h3>Text Elements</h3>
+
+  <h1>Heading 1</h1>
+
+  <h2>Heading 2</h2>
+
+  <h3>Heading 3</h3>
+
+  <h4>Heading 4</h4>
+
+  <h5>Heading 5</h5>
+
+  <h6>Heading 6</h6>
+
+  <p>Text Large</p>
+
+  <p>Text Medium</p>
+
+  <p>Text Small</p>
+
+  <p>Text Tiny</p>
+
+  <p>Text Subdued</p>
+
+  <p>Text Error</p>
+
+  <p>Text Interactive</p>
+
+  <ul>
+    <li><a href="">Link One</a></li>
+    <li><a href="">Link Two</a></li>
+    <li><a href="">Link Three</a></li>
+  </ul>
+
+  <ol>
+    <li><a href="">Link One</a></li>
+    <li><a href="">Link Two</a></li>
+    <li><a href="">Link Three</a></li>
+  </ol>
+
+  <dl>
+    <dt>Definition Term</dt>
+    <dd>Definition Description</dd>
+
+    <dt>Definition Term</dt>
+    <dd>Definition Description</dd>
+
+    <dt>Definition Term</dt>
+    <dd>Definition Description</dd>
+  </dl>
+
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum dolorem excepturi id vel architecto a libero obcaecati, omnis ea qui, quidem deserunt cum at doloribus enim tempore unde accusamus perspiciatis!</p>
+
+  <p>Eveniet quo nam harum, consectetur voluptatibus eos, vel ullam delectus laboriosam error, asperiores exercitationem recusandae a. Placeat odio laboriosam ad debitis dicta aut molestiae maxime distinctio eos aspernatur? Perferendis, delectus?</p>
+
+  <p>Illum, quas esse suscipit facere fugiat alias voluptatum natus itaque quod, minima obcaecati! Ea eum qui laboriosam expedita? Non est ullam inventore quaerat facilis! Quo sapiente amet voluptatibus et laboriosam.</p>
+
+  <p><strong>Strong Text</strong></p>
+
+  <p><em>Emphasized Text</em></p>
+
+  <p><code>cool.css</code></p>
+
+<pre>
+  .#{$prefix}-styles,
+  .#{$prefix}-styles *,
+  .#{$prefix}-styles *::before,
+  .#{$prefix}-styles *::after {
+    box-sizing: border-box;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    margin: unset;
+    padding: unset;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+</pre>
+
+  <blockquote>
+    <p>Blockquote: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur ea aperiam culpa delectus, fugiat vero non! Ipsa odit velit neque, nam nobis ipsam rerum dicta, dignissimos magni rem at. Id.</p>
+    <cite>Some guy</cite>
+  </blockquote>
+
+  <address>
+  Elwood Blues<br>
+  1060 W. Addison St.<br>
+  Chicago, IL 60613<br>
+  </address>
+
+  <details>
+    <summary>Details/Summary</summary>
+    <div class="cool-flow-16">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo neque repellat atque quo consequuntur aspernatur commodi assumenda sed? Possimus numquam iste temporibus officiis cum facere quo quibusdam modi neque molestias.</p>
+
+      <p>Dicta tempora delectus quos natus, illum vel incidunt pariatur inventore necessitatibus deleniti reprehenderit fugiat! Pariatur iure sunt, saepe obcaecati recusandae possimus eos totam amet dignissimos quis necessitatibus ullam corporis culpa.</p>
+    </div>
+  </details>
+
+  <table>
+    <caption>Table Caption</caption>
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+      </tr>
+    </thead>
+  <tbody>
+      <tr>
+        <td>Adam</td>
+        <td>adam@coolcss.dev</td>
+        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+      </tr>
+      <tr>
+        <td>Beth</td>
+        <td>beth@coolcss.dev</td>
+        <td>Cumque, recusandae magni tempore tenetur eum eos cupiditate beatae assumenda voluptates ea, sunt aut cum delectus suscipit.</td>
+      </tr>
+      <tr>
+        <td>Chuck</td>
+        <td>chuck@coolcss.dev</td>
+        <td>Totam tenetur mollitia repudiandae cumque?</td>
+      </tr>
+  </tbody>
+  </table>
+
+  <figure>
+    <img src="https://www.fillmurray.com/400/225" alt="Bill Murray">
+    <figcaption>Courtesy of <a href="https://www.fillmurray.com/">Fill Murray</a></figcaption>
+  </figure>
+
+  <form>
+    <fieldset class="cool-flow-16">
+      <legend>Form Legend</legend>
+      <div>
+        <label for="text-input">Text Input</label>
+        <input type="text" id="text-input" name="text-input" placeholder="Placeholder">
+      </div>
+
+      <div>
+        <label for="search-input">Search Input</label>
+        <input type="search" id="search-input" name="search-input" placeholder="Placeholder">
+      </div>
+
+      <div>
+        <label for="textarea">Textarea</label>
+        <textarea id="textarea" name="textarea" placeholder="Tell me your deepest, darkest secret"></textarea>
+      </div>
+
+      <div>
+        <label for="select">Select</label>
+        <select id="select" name="select">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </div>
+
+      <div>
+        <p><label for="radio-buttons">Radio Buttons</label></p>
+        <label>
+          <input type="radio" name="radio-buttons" selected>
+          <span>Option 1 (selected)</span>
+        </label>
+        <label>
+          <input type="radio" name="radio-buttons">
+          <span>Option 2</span>
+        </label>
+        <label>
+          <input type="radio" name="radio-buttons" disabled>
+          <span>Option 3 (disabled)</span>
+        </label>
+      </div>
+
+      <div>
+        <p><label for="checkboxes">Checkboxes</label></p>
+        <label>
+          <input type="checkbox" name="checkboxes" selected>
+          <span>Option 1 (selected)</span>
+        </label>
+        <label>
+          <input type="checkbox" name="checkboxes">
+          <span>Option 2</span>
+        </label>
+        <label>
+          <input type="checkbox" name="checkboxes" disabled>
+          <span>Option 3 (disabled)</span>
+        </label>
+      </div>
+
+      <div>
+        <label for="file">File Upload</label>
+        <input type="file" id="file" name="file">
+      </div>
+
+      <button>Button</button>
+      <input type="button" value="Input Button">
+      <input type="submit" value="Submit Button">
+    </fieldset>
+  </form>
+
+</article>

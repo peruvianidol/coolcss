@@ -5,3 +5,7 @@
   font-size: $text-medium-font-size;
   line-height: $text-medium-line-height;
 }
+
+.#{$prefix}-styles figure img {
+  width: 100%;
+}

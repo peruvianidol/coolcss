@@ -1,0 +1,50 @@
+.#{$prefix}-layout-two-column-aside-main {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer";
+
+  [data-grid-area="header"],
+  [data-grid-area="aside"],
+  [data-grid-area="main"],
+  [data-grid-area="footer"] {
+    padding: $spacing-16;
+  }
+
+  [data-grid-area="header"] {
+    grid-area: header;
+  }
+
+  [data-grid-area="aside"] {
+    grid-area: aside;
+  }
+
+  [data-grid-area="main"] {
+    grid-area: main;
+  }
+
+  [data-grid-area="footer"] {
+    grid-area: footer;
+  }
+
+  article {
+    max-width: $max-line-length;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .#{$prefix}-layout-two-column-aside-main {
+    min-height: 100vh;
+    grid-template-columns: 1fr $sidebar-width;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+  }
+}

@@ -1,0 +1,17 @@
+.#{$prefix}-styles label {
+  font-weight: 600;
+  display: block;
+
+  [type="checkbox"] + span,
+  [type="radio"] + span {
+    font-weight: 400;
+  }
+}
+
+.#{$prefix}-styles fieldset {
+  border: 0;
+}
+
+.#{$prefix}-styles legend {
+  font-weight: 600;
+}

@@ -1,0 +1,10 @@
+.#{$prefix}-nav-list {
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: $color-text-interactive;
+    text-decoration: underline;
+  }
+}

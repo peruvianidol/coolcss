@@ -95,6 +95,16 @@
   margin-bottom: 1rem;
 }
 
+@media (min-width: 700px) {
+  .cool-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cool-space-between > :not(last-child) {
+    margin-right: 1rem;
+  }
+}
 .cool-layout-single-column {
   max-width: calc(200px + 75ch);
   margin: 0 auto;

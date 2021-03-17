@@ -25,14 +25,15 @@
 .cool-styles a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-.cool-styles ul[class],
-.cool-styles ol[class] {
+.cool-styles ul[role=list],
+.cool-styles ol[role=list] {
   list-style: none;
 }
 .cool-styles dt {
   font-weight: 600;
 }
 .cool-styles img,
+.cool-styles video,
 .cool-styles picture {
   max-width: 100%;
   display: block;
@@ -61,7 +62,8 @@
   line-height: 1.5rem;
 }
 .cool-styles figure img,
-.cool-styles figure video {
+.cool-styles figure video,
+.cool-styles figure picture {
   width: 100%;
 }
 

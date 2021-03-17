@@ -26,6 +26,6 @@
     "sass": "^1.26.10"
   },
   "browserslist": [
-    "last 2 versions"
+    "> .5%, not IE 11"
   ]
 }

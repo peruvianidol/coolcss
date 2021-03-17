@@ -16,6 +16,7 @@
 .#{$prefix}-styles {
   text-rendering: optimizeSpeed;
 
+  // not sure if this can be applied to body instead of html
   &:focus-within {
     scroll-behavior: smooth;
   }
@@ -28,21 +29,24 @@
     text-decoration-skip-ink: auto;
   }
 
-  ul[class],
-  ol[class] {
+  ul[role="list"],
+  ol[role="list"] {
     list-style: none;
-  }  
+  }
 
+  // move this to list styles
   dt {
     font-weight: 600;
   }
 
   img,
+  video,
   picture {
     max-width: 100%;
     display: block;
   }
 
+  // whoops we inherited the body font above
   code,
   pre {
     font-family: monospace;

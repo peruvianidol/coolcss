@@ -1,7 +1,7 @@
 <article class="cool-flow-16">
   <h2>The last CSS framework I'll (hopefully) ever have to build.</h2>
 
-  <p>Between switching jobs and starting a bunch of side-projects, I've found myself re-writing a lot of CSS in the past year. Wouldn't it be nice, I thought, if I could just write one CSS framework and use it on any project? <strong>cool.css</strong> is my attempt to do just that.</p>
+  <p>Between <a href="https://www.mikeaparicio.com/posts/2020-07-23-goodbye-groupon/">switching jobs</a> and starting <a href="https://11ty.recipes/">a bunch</a> of <a href="https://dogsof.dev/">side-projects</a>, I've found myself re-writing a lot of CSS in the past year. Wouldn't it be nice, I thought, if I could just write one CSS framework and use it on any project? <strong>cool.css</strong> is my attempt to do just that.</p>
 
   <h3>Just what the world needs&mdash;another fucking CSS framework!</h3>
 
@@ -19,7 +19,7 @@
     <li>Easy to use</li>
     <li>Easy to maintain</li>
     <li>Fully customizable/themable</li>
-    <li>Baked in some accessibility</li>
+    <li>Built with accessibility and performance in mind</li>
     <li>Required little to no page/app-specific CSS to be written by developers</li>
   </ul>
 
@@ -27,15 +27,13 @@
 
   <p>Each new framework I had made over the years built on hard lessons learned from the last. One of the biggest issues that always eluded me was that no matter how good I made the framework, developers would always build their own styles on top of the framework, to varying degrees of success.</p>
 
-  <p>Any time a new feature was designed, the product and engineering teams would look to the CSS framework to support the visual styles, bloating the framework, blocking engineering teams, and making it harder to maintain.</p>
-
   <p>Eventually my process evolved into its own methodology, combining parts of <a href="http://smacss.com/">SMACCS</a>, <a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a>, <a href="https://tailwindcss.com/">Tailwind</a> and <a href="https://cube.fyi/">CUBE CSS</a>.</p>
 
   <p>The <strong>COOL</strong> methodology includes three types of styles.</p>
 
   <dl>
     <dt>Component Styles</dt>
-    <dd class="cool-stack-16">Individual components are styled to be used in any context.</dd>
+    <dd class="cool-stack-16">Individual components are styled to be used in any context and composed into larger components using utility styles.</dd>
 
     <dt>Utility Styles <span>(The OO in COOL)</span></dt>
     <dd class="cool-stack-16">These single-purpose classes allow you to compose multiple components in any number of ways without having to re-declare styles in different contexts.</dd>
@@ -108,7 +106,7 @@
 
   <p>CSS frameworks have made the 12-column grid ubiquitous. These grids were born from a desire to mimic print designs. But we're not Swiss Modernists, we're just making websites, y'all.</p>
 
-  <p>These grid systems allow you do compose elements in any combination of ways, but usually we're just using halves or quarters, or dividing a number of elements equally across the available space. You don't need the overhead of a grid system to do that.</p>
+  <p>These grid systems allow you to compose elements in any combination of ways, but usually we're just using halves or quarters, or dividing a number of elements equally across the available space. You don't need the overhead of a grid system to do that.</p>
 
   <p><strong>cool.css</strong> includes utility classes for simple flexbox and grid layouts for components, as well as common, responsive layout patterns for pages. Remember the Holy Grail layout? That's like 90% of pages right there. You don't need a 12-column grid system to make that.</p>
 
@@ -121,16 +119,14 @@
 
     <li><strong>Contextual tokens</strong> describe how Global Tokens are used. They include common values that are used across multiple components, such as <code>$color-background-brand</code>. Contextual Tokens allow us to change from one Global Token value to another across multiple components.</p>
 
-    <li><strong>Component tokens</strong> are values specific to a single component and can point to Contextual Tokens, Global Tokens, or even one-off values. Component Tokens allow us to make changes to a single component — changing the background color of the CTA button from green to blue, for example — without having to edit the app styles.</p>
+    <li><strong>Component tokens</strong> are values specific to a single component and can point to Contextual Tokens, Global Tokens, or even one-off values. Component Tokens allow us to make changes to a single component — changing the background color of the CTA button from green to blue, for example — without having to edit any CSS.</p>
   </ul>
-
-  <p>Design tokens allow you to customize <strong>cool.css</strong> as much or as little as you want, all without having to edit any CSS.</p>
 
   <h4>Stack agnostic</h4>
 
   <p><strong>cool.css</strong> is built with Sass but you don't necessarily even have to use Sass to use cool.css. You can just as easily add the compiled CSS to any project.</p>
 
-  <h3>Making CSS Cool</h3>
+  <h3>Making CSS cool</h3>
   
   <p>I've worked with so many developers who struggle with CSS. The methodology I've used over the years in building custom CSS frameworks for different projects and companies has helped accelerate the process of getting ideas from concept to production.</p>
 
@@ -139,6 +135,8 @@
   <p><strong>Designers love it</strong> because the finished product ends up looking like their design with a lot less back and forth.</p>
 
   <p><strong>Managers and other stakeholders love it</strong> because in frees up their teams to focus on the things they're good at.</p>
+
+  <p><strong>cool.css</strong> is not meant to compete with frameworks like Bootstrap or Tailwind. It's mostly a tool for me to quickly port common patterns between projects and make them visually distinct using design tokens. If you get some use out of the framework or the ideas of the COOL methodology, I'd love to hear about it. If you have constructive feedback I'd also love to hear it!</p>
 
   <figure>
     <video preload="auto" aria-label="Embedded video" src="/images/coolcss.mp4" poster="/images/coolcss.jpg" type="video/mp4" autoplay disablePictureInPicture loop></video>

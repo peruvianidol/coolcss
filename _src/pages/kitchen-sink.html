@@ -2,36 +2,30 @@
 title: Kitchen Sink
 ---
 
-<article class="cool-flow-16">
+<article class="cool-flow-24">
   <p>This page will help me style all the default elements in <strong>cool.css</strong>. Eventually I'll add other components like tabs and modals.</p>
 
-  <h3>Text Elements</h3>
+  <h3 class="cool-heading-3">Text Elements</h3>
 
-  <h1>Heading 1</h1>
+  <h1 class="cool-heading-1">Heading 1</h1>
 
-  <h2>Heading 2</h2>
+  <h2 class="cool-heading-2">Heading 2</h2>
 
-  <h3>Heading 3</h3>
+  <h3 class="cool-heading-3">Heading 3</h3>
 
-  <h4>Heading 4</h4>
+  <h4 class="cool-heading-4">Heading 4</h4>
 
-  <h5>Heading 5</h5>
+  <p class="cool-text-large"><strong>Text Large</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quasi nihil non voluptatum illum nemo porro facilis. Beatae fugiat ex ea consequatur debitis, obcaecati alias eius sit atque laboriosam iusto.</p>
 
-  <h6>Heading 6</h6>
+  <p class="cool-text-medium"><strong>Text Medium</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quia optio perspiciatis, voluptates reprehenderit consequatur, quas error dolores aut ex nulla! Commodi omnis asperiores temporibus nesciunt, sit blanditiis ducimus cumque?</p>
 
-  <p>Text Large</p>
+  <p class="cool-text-small"><strong>Text Small</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro architecto possimus hic similique autem facilis a veritatis mollitia tempora voluptatum! Unde quaerat nisi tempore deserunt natus eveniet, quae rem cupiditate!</p>
 
-  <p>Text Medium</p>
+  <p class="cool-text-subdued">Text Subdued</p>
 
-  <p>Text Small</p>
+  <p class="cool-text-error">Text Error</p>
 
-  <p>Text Tiny</p>
-
-  <p>Text Subdued</p>
-
-  <p>Text Error</p>
-
-  <p>Text Interactive</p>
+  <p class="cool-text-interactive"><a href="">Text Interactive</a></p>
 
   <ul>
     <li><a href="">Link One</a></li>
@@ -66,31 +60,34 @@ title: Kitchen Sink
 
   <p><em>Emphasized Text</em></p>
 
-  <p><code>cool.css</code></p>
+  <p><code>Code</code></p>
 
 <pre>
-  .#{$prefix}-styles,
-  .#{$prefix}-styles *,
-  .#{$prefix}-styles *::before,
-  .#{$prefix}-styles *::after {
-    box-sizing: border-box;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    margin: unset;
-    padding: unset;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: inherit;
-  }
+// &lt;pre&gt;
+
+.#{$prefix}-styles,
+.#{$prefix}-styles *,
+.#{$prefix}-styles *::before,
+.#{$prefix}-styles *::after {
+  box-sizing: border-box;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  margin: unset;
+  padding: unset;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
 </pre>
 
   <blockquote>
     <p>Blockquote: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur ea aperiam culpa delectus, fugiat vero non! Ipsa odit velit neque, nam nobis ipsam rerum dicta, dignissimos magni rem at. Id.</p>
-    <cite>Some guy</cite>
+    <cite>cite &mdash; Some guy</cite>
   </blockquote>
 
   <address>
+  <strong>Address</strong><br>
   Elwood Blues<br>
   1060 W. Addison St.<br>
   Chicago, IL 60613<br>
@@ -109,7 +106,7 @@ title: Kitchen Sink
     <caption>Table Caption</caption>
     <thead>
       <tr>
-        <th>Column 1</th>
+        <th width="15%">Column 1</th>
         <th>Column 2</th>
         <th>Column 3</th>
       </tr>
@@ -132,6 +129,8 @@ title: Kitchen Sink
       </tr>
   </tbody>
   </table>
+
+  <p><strong>Figure</strong></p>
 
   <figure>
     <img src="https://www.fillmurray.com/400/225" alt="Bill Murray">

@@ -1,9 +1,9 @@
-<article class="cool-flow-16">
-  <h2>The last CSS framework I'll (hopefully) ever have to build.</h2>
+<article class="cool-flow-24">
+  <h3 class="cool-heading-3">The last CSS framework I'll (hopefully) ever have to build.</h3>
 
   <p>Between <a href="https://www.mikeaparicio.com/posts/2020-07-23-goodbye-groupon/">switching jobs</a> and starting <a href="https://11ty.recipes/">a bunch</a> of <a href="https://dogsof.dev/">side-projects</a>, I've found myself re-writing a lot of CSS in the past year. Wouldn't it be nice, I thought, if I could just write one CSS framework and use it on any project? <strong>cool.css</strong> is my attempt to do just that.</p>
 
-  <h3>Just what the world needs&mdash;another fucking CSS framework!</h3>
+  <h4 class="cool-heading-4">Just what the world needs&mdash;another fucking CSS framework!</h4>
 
   <p>Yes, I know. I feel the same way.</p>
   
@@ -23,7 +23,7 @@
     <li>Required little to no page/app-specific CSS to be written by developers</li>
   </ul>
 
-  <h3>The COOL Methodology</h3>
+  <h3 class="cool-heading-3">The COOL Methodology</h3>
 
   <p>Each new framework I had made over the years built on hard lessons learned from the last. One of the biggest issues that always eluded me was that no matter how good I made the framework, developers would always build their own styles on top of the framework, to varying degrees of success.</p>
 
@@ -42,17 +42,17 @@
     <dd class="cool-stack-16">Rather than using a generic 12-column grid, a number of pre-defined layouts are provided (using CSS grid) that can be used to organize pages of content.</dd>
   </dl>
 
-  <h3>COOL principles, bruh</h3>
+  <h3 class="cool-heading-3">COOL principles, bruh</h3>
 
   <p>The COOL methodology is based on a few principles.</p>
 
-  <h4>Everything is scoped to the framework</h4>
+  <h4 class="cool-heading-4">Everything is scoped to the framework</h4>
 
   <p>A lot of frameworks apply styles directly to HTML elements like <body>. This is fine if you're starting a new project, but if you're coming into an existing project with legacy styles, introducing a framework can cause conflicts with those styles.</p>
 
-  <p><stronig>cool.css</strong> has a <code>$prefix</code> token that's appended to every selector in the framework. Styles which would otherwise be added directly to an element are instead scoped within a global class, <code>.#{$prefix}-styles</code>. (The default value of <code>$prefix</code> is "cool", so <code>.cool-styles</code>) You can apply this class to the body or, if you're slowly introducing the framework to an existing site, you can add it to a parent container where you want to use the framework.</p>
+  <p><strong>cool.css</strong> has a <code>$prefix</code> token that's appended to every selector in the framework. Styles which would otherwise be added directly to an element are instead scoped within a global class, <code>.#{$prefix}-styles</code>. (The default value of <code>$prefix</code> is "cool", so <code>.cool-styles</code>) You can apply this class to the body or, if you're slowly introducing the framework to an existing site, you can add it to a parent container where you want to use the framework.</p>
 
-  <h4>A minimal reset</h4>
+  <h4 class="cool-heading-4">A minimal reset</h4>
 
   <p>Resets like CSS Reset or normalize.css are great for making things look the same across all browsers, but often require you to redeclare basic styles for each element. Besides that, browsers have improved over the years to the point where they aren't strictly necessary.</p>
 
@@ -62,7 +62,7 @@
 
   <p><strong>cool.css</strong> also sets font properties to inherit. This encourages developers using the framework to select elements like headers semantically and use classes for applying visual styles, rather than selecting an <code>&lt;h2&gt;</code> because it's visually bigger than an <code>&lt;h3&gt;</code>, for example.</p>
 
-  <h4>Not utility-first but utility-also</h4>
+  <h4 class="cool-heading-4">Not utility-first but utility-also</h4>
 
   <p>Pure utility frameworks like Tailwind have their advantages. However, I have two issues with them.</p>
 
@@ -76,7 +76,7 @@
 
   <p>The goal is that you should be able to build any design without having to add any additional styles.</p>
 
-  <h4>Let the C in CSS do its thing</h4>
+  <h4 class="cool-heading-4">Let the C in CSS do its thing</h4>
 
   <p>Fun fact: the C in CSS stands for cascade. Methodolgies like BEM, in an effort to encapsulate styles, often result in having overly-specific selectors and a lot of redundant style declarations.</p>
 
@@ -91,18 +91,18 @@
     .card--button-cta
 </pre>
 
-  <p>Is all that really necessary? Do styles for a title have to be scoped to a card? Or can we just have .card define the container and use more generic, reusable styles inside of it?</p>
+  <p>Is all that really necessary? Do styles for a title have to be scoped to a card? Or can we just have <code>.card</code> define the container and use more generic, reusable styles inside of it?</p>
 
 <pre>
 .card
   img
   figcaption
     .heading-3
-    .text-medium-subdued
+    .text-medium.text-subdued
     .button-primary
 </pre>
 
-  <h4>The 12-column grid is dead, long live the 12-column grid</h4>
+  <h4 class="cool-heading-4">The 12-column grid is dead, long live the 12-column grid</h4>
 
   <p>CSS frameworks have made the 12-column grid ubiquitous. These grids were born from a desire to mimic print designs. But we're not Swiss Modernists, we're just making websites, y'all.</p>
 
@@ -110,7 +110,7 @@
 
   <p><strong>cool.css</strong> includes utility classes for simple flexbox and grid layouts for components, as well as common, responsive layout patterns for pages. Remember the Holy Grail layout? That's like 90% of pages right there. You don't need a 12-column grid system to make that.</p>
 
-  <h4>Powered by design tokens</h4>
+  <h4 class="cool-heading-4">Powered by design tokens</h4>
 
   <p><strong>cool.css</strong> is easily themable thanks to three levels of design tokens:</p>
 
@@ -122,11 +122,11 @@
     <li><strong>Component tokens</strong> are values specific to a single component and can point to Contextual Tokens, Global Tokens, or even one-off values. Component Tokens allow us to make changes to a single component — changing the background color of the CTA button from green to blue, for example — without having to edit any CSS.</p>
   </ul>
 
-  <h4>Stack agnostic</h4>
+  <h4 class="cool-heading-4">Stack agnostic</h4>
 
   <p><strong>cool.css</strong> is built with Sass but you don't necessarily even have to use Sass to use cool.css. You can just as easily add the compiled CSS to any project.</p>
 
-  <h3>Making CSS cool</h3>
+  <h3 class="cool-heading-3">Making CSS cool</h3>
   
   <p>I've worked with so many developers who struggle with CSS. The methodology I've used over the years in building custom CSS frameworks for different projects and companies has helped accelerate the process of getting ideas from concept to production.</p>
 

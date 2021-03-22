@@ -1,18 +1,61 @@
 // all of your selectors will be prefixed with this.
 $prefix: cool;
 
-$spacing-16: 1rem;
-$spacing-32: 2rem;
+$color-black: #000000;
+$color-gray-800: hsl(214, 5%, 10%); // #18191b
+$color-gray-600: hsl(201, 10%, 46%); // #6A7981
+$color-gray-400: hsl(191, 5%, 50%); // #798486
+$color-gray-200: hsl(193, 5%, 85%); // #D7DADB
+$color-white: #ffffff;
+
+$color-blue-800: hsl(214, 45%, 20%); // #1C304A
+$color-blue-600: hsl(199, 95%, 31%); // #046B99
+$color-blue-400: hsl(191, 100%, 50%); // #00CFFF
+$color-blue-200: hsl(193, 100%, 85%); // #B3EFFF
+
+$color-red-600: hsl(350, 75%, 53%); // #e12b4a
+
+$heading-1-font-size: 2.5rem;
+$heading-1-line-height: 3rem;
+$heading-2-font-size: 2rem;
+$heading-2-line-height: 2.5rem;
+$heading-3-font-size: 1.5rem;
+$heading-3-line-height: 2rem;
+$heading-4-font-size: 1.25rem;
+$heading-4-line-height: 1.875rem;
+
+$text-large-font-size: 1.25rem;
+$text-large-line-height: 1.875rem;
 
 $text-medium-font-size: 1rem;
 $text-medium-line-height: 1.5rem;
 
-$font-family: sans-serif;
+$text-small-font-size: .875rem;
+$text-small-line-height: 1.25rem;
 
-$max-line-length: 75ch;
+$font-family: Rubik, sans-serif;
+
+$spacing-4: .25rem;
+$spacing-8: .5rem;
+$spacing-16: 1rem;
+$spacing-24: 1.5rem;
+$spacing-32: 2rem;
+$spacing-64: 4rem;
+
+$border-radius-small: 2px;
+
+$max-line-length: 65ch;
 $sidebar-width: 200px;
 $container-max-width: calc(#{$sidebar-width} + #{$max-line-length});
-
-$color-text-interactive: blue;
-
 $breakpoint-medium: 700px;
+
+$color-text-body: $color-gray-800;
+$color-text-subdued: $color-gray-600;
+$color-text-interactive: $color-blue-600;
+$color-text-interactive-hover: $color-blue-800;
+$color-text-error: $color-red-600;
+$color-text-inverse: $color-white;
+
+$color-border-default: $color-gray-400;
+$border-width-default: 1px;
+

@@ -2,12 +2,61 @@
 
 .#{$prefix}-styles {
   font-family: $font-family;
-  font-size: $text-medium-font-size;
-  line-height: $text-medium-line-height;
+  font-size: $text-large-font-size;
+  line-height: $text-large-line-height;
 
   figure img,
   figure video,
   figure picture {
     width: 100%;
+  }
+  a {
+    color: $color-text-interactive;
+    text-underline-offset: 2px;
+    
+    &:hover {
+      color: $color-text-interactive-hover;
+    }
+  }
+  code {
+    display: inline-block;
+    font-size: .875em;
+    line-height: 1.5em;
+    color: $color-text-inverse;
+    background-color: $color-blue-600;
+    border-radius: $border-radius-small;
+    padding: 0 $spacing-4;
+  }
+  pre {
+    background-color: $color-gray-800;
+    color: $color-text-inverse;
+    padding: $spacing-16;
+    border-radius: $border-radius-small;
+  }
+  blockquote {
+    padding: $spacing-16 $spacing-32;
+    font-size: $text-large-font-size;
+    line-height: $text-large-line-height;
+    border: solid $color-border-default;
+    border-width: $border-width-default 0;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: $spacing-4 $spacing-8;
+    border: 1px solid $color-border-default;
+  }
+  th, caption {
+    text-align: left;
+  }
+  caption {
+    padding: $spacing-4 0;
+  }
+  figcaption {
+    padding: $spacing-4 0;
+  }
+  ul, ol {
+    padding-left: 1em;
   }
 }

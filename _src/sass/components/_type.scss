@@ -1,0 +1,36 @@
+.#{$prefix} {
+  &-heading-1 {
+    font-size: $heading-1-font-size;
+    line-height: $heading-1-line-height;
+  }
+  &-heading-2 {
+    font-size: $heading-2-font-size;
+    line-height: $heading-2-line-height;
+  }
+  &-heading-3 {
+    font-size: $heading-3-font-size;
+    line-height: $heading-3-line-height;
+  }
+  &-heading-4 {
+    font-size: $heading-4-font-size;
+    line-height: $heading-4-line-height;
+  }
+  &-text-large {
+    font-size: $text-large-font-size;
+    line-height: $text-large-line-height;
+  }
+  &-text-medium {
+    font-size: $text-medium-font-size;
+    line-height: $text-medium-line-height;
+  }
+  &-text-small {
+    font-size: $text-small-font-size;
+    line-height: $text-small-line-height;
+  }
+  &-text-subdued {
+    color: $color-text-subdued;
+  }
+  &-text-error {
+    color: $color-text-error;
+  }
+}

@@ -3,6 +3,10 @@
     margin-bottom: $spacing-16;
   }
 
+  &-flow-24 > :not(:last-child) {
+    margin-bottom: $spacing-24;
+  }
+
   &-stack-16 {
     margin-bottom: $spacing-16;
   }

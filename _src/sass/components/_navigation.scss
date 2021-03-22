@@ -1,5 +1,9 @@
 .#{$prefix}-nav-list {
+  list-style: none;
+  font-size: $text-medium-font-size;
+  line-height: text-medium-line-height;
   a {
+    color: $color-text-subdued;
     text-decoration: none;
   }
   

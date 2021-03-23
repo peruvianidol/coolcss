@@ -1,3 +1,20 @@
+[class*=#{$prefix}-flex-row] {
+  display: flex;
+  align-items: center;
+}
+
+.#{$prefix}-flex-row {
+  & :not(:last-child) {
+    margin-right: $spacing-16;
+  }
+  &-8 :not(:last-child) {
+    margin-right: $spacing-8;
+  }
+  &-4 :not(:last-child) {
+    margin-right: $spacing-4;
+  }
+}
+
 @media (min-width: $breakpoint-medium) {
   .#{$prefix} {
     &-space-between {

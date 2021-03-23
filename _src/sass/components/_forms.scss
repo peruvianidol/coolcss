@@ -1,7 +1,8 @@
 .#{$prefix}-styles {
-  label {
+  label:not(.#{$prefix}-form-control) {
     font-weight: 600;
     display: block;
+    margin-bottom: $spacing-4;
 
     [type="checkbox"] + span,
     [type="radio"] + span {
@@ -24,7 +25,7 @@
     --form-field-width: #{$form-field-width-default};
     background-color: $color-white;
     border: $border-width-thick solid $color-border-default;
-    border-radius: $border-radius-small;
+    border-radius: $border-radius-medium;
     font-size: $text-medium-font-size;
     max-width: 100%;
     width: var(--form-field-width, $form-field-width-default);
@@ -69,6 +70,101 @@
 
     &::placeholder {
       color: $color-text-subdued;
+    }
+  }
+
+  &-form-control {
+    display: grid;
+    align-items: center;
+    grid-template-columns: $form-control-size 1fr;
+    grid-gap: $form-field-padding;
+
+    &:not(:last-child) {
+      margin-bottom: $spacing-4;
+    }
+
+    input {
+      appearance: none;
+      width: $form-control-size;
+      height: $form-control-size;
+      border: $border-width-thick solid $color-border-default;
+      position: relative;
+
+      &[type="radio"] {
+        border-radius: 50%;
+      }
+
+      &[type="checkbox"] {
+        border-radius: $border-radius-small;
+      }
+
+      &:focus {
+        border-color: $color-border-focus;
+        box-shadow: 0 0 .35em -.1em $color-border-focus;
+        outline: $border-width-thick solid transparent;
+      }
+
+      &:checked {
+        border-color: $form-control-border;
+
+        &[type="radio"]:before {
+          content: "";
+          display: block;
+          width: calc(#{$form-control-size} * .65);
+          height: calc(#{$form-control-size} * .65);
+          background-color: $form-control-background;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        // URL encode the # of the hex value (see functions)
+        $check-color: encodecolor($color-icon-inverse);
+    
+        &[type="checkbox"] {
+          background-color: $form-control-background;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M12 30c-.5 0-1-.2-1.4-.6l-8-8c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0l6.3 6.3 14.6-22c.6-.9 1.9-1.2 2.8-.6.9.6 1.2 1.9.6 2.8l-16 24c-.3.5-.9.8-1.5.9H12z' fill='#{$check-color}'/%3E%3C/svg%3E%0A");
+          background-size: calc(#{$form-control-size} * .65) calc(#{$form-control-size} * .65);
+          background-position: 50% 50%;
+        }
+
+
+      }
+
+      &:disabled {
+        background-color: $color-gray-200;
+        border-color: $color-gray-400;
+
+        & + span {
+          color: $color-text-subdued;
+        }
+      }
+    }
+  }
+
+  &-button {
+    display: inline-block;
+    appearance: none;
+    border: $border-width-thick solid transparent;
+    border-radius: $border-radius-medium;
+    padding: $form-field-padding;
+    margin: 0;
+    background-color: $form-control-background;
+    color: $color-text-inverse;
+    font-size: $text-medium-font-size;
+    line-height: $text-medium-line-height;
+    cursor: pointer;
+
+    &:focus {
+      border-color: $color-border-focus;
+      box-shadow: 0 0 .35em -.1em $color-border-focus;
+      outline: $border-width-thick solid transparent;      
+    }
+
+    &:hover {
+      background-color: $form-control-background-highlight;
     }
   }
 }

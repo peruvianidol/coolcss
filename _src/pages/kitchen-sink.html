@@ -135,95 +135,95 @@ title: Kitchen Sink
     <figcaption>Courtesy of <a href="https://www.fillmurray.com/">Fill Murray</a></figcaption>
   </figure>
 
-  <form>
-    <fieldset class="cool-flow-16">
-      <legend>Form Legend</legend>
-      <div>
-        <label for="text-input">Text Input</label>
-        <input type="text" id="text-input" name="text-input" placeholder="Placeholder" class="cool-input">
+  <form  class="cool-flow-16">
+    <div>
+      <label for="text-input">Text Input</label>
+      <input type="text" id="text-input" name="text-input" placeholder="Placeholder" class="cool-input">
+    </div>
+
+    <div>
+      <label for="text-input">Disabled Text Input</label>
+      <input type="text" id="text-input" name="text-input" placeholder="Placeholder" class="cool-input" disabled>
+    </div>
+
+    <!--<div>
+      <label for="search-input">Search Input</label>
+      <input type="search" id="search-input" name="search-input" placeholder="Placeholder" class="cool-input">
+    </div>-->
+
+    <div>
+      <label for="textarea">Textarea</label>
+      <textarea id="textarea" name="textarea" placeholder="Tell me your deepest, darkest secret" class="cool-input"></textarea>
+    </div>
+
+    <div>
+      <label for="textarea">Disabled Textarea</label>
+      <textarea id="textarea" name="textarea" placeholder="Tell me your deepest, darkest secret" class="cool-input" disabled></textarea>
+    </div>
+
+    <div>
+      <label for="select">Select</label>
+      <select id="select" name="select" class="cool-input">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
       </div>
+    </div>
 
-      <div>
-        <label for="text-input">Disabled Text Input</label>
-        <input type="text" id="text-input" name="text-input" placeholder="Placeholder" class="cool-input" disabled>
+    <div>
+      <label for="select">Disabled Select</label>
+      <select id="select" name="select" class="cool-input" disabled>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
       </div>
+    </div>
 
-      <!--<div>
-        <label for="search-input">Search Input</label>
-        <input type="search" id="search-input" name="search-input" placeholder="Placeholder" class="cool-input">
-      </div>-->
-
-      <div>
-        <label for="textarea">Textarea</label>
-        <textarea id="textarea" name="textarea" placeholder="Tell me your deepest, darkest secret" class="cool-input"></textarea>
-      </div>
-
-      <div>
-        <label for="textarea">Disabled Textarea</label>
-        <textarea id="textarea" name="textarea" placeholder="Tell me your deepest, darkest secret" class="cool-input" disabled></textarea>
-      </div>
-
-      <div>
-        <label for="select">Select</label>
-        <select id="select" name="select" class="cool-input">
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-        </div>
-      </div>
-
-      <div>
-        <label for="select">Disabled Select</label>
-        <select id="select" name="select" class="cool-input" disabled>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-        </div>
-      </div>
-
-      <div>
-        <p><label for="radio-buttons">Radio Buttons</label></p>
-        <label>
-          <input type="radio" name="radio-buttons" selected>
-          <span>Option 1 (selected)</span>
-        </label>
-        <label>
-          <input type="radio" name="radio-buttons">
-          <span>Option 2</span>
-        </label>
-        <label>
-          <input type="radio" name="radio-buttons" disabled>
-          <span>Option 3 (disabled)</span>
-        </label>
-      </div>
-
-      <div>
-        <p><label for="checkboxes">Checkboxes</label></p>
-        <label>
-          <input type="checkbox" name="checkboxes" selected>
-          <span>Option 1 (selected)</span>
-        </label>
-        <label>
-          <input type="checkbox" name="checkboxes">
-          <span>Option 2</span>
-        </label>
-        <label>
-          <input type="checkbox" name="checkboxes" disabled>
-          <span>Option 3 (disabled)</span>
-        </label>
-      </div>
-
-      <div>
-        <label for="file">File Upload</label>
-        <input type="file" id="file" name="file">
-      </div>
-
-      <button>Button</button>
-      <input type="button" value="Input Button">
-      <input type="submit" value="Submit Button">
+    <fieldset>
+      <legend>Radio Buttons</legend>
+      <label class="cool-form-control">
+        <input type="radio" name="radio-buttons" checked>
+        <span>Option 1 (checked)</span>
+      </label>
+      <label class="cool-form-control">
+        <input type="radio" name="radio-buttons">
+        <span>Option 2</span>
+      </label>
+      <label class="cool-form-control">
+        <input type="radio" name="radio-buttons" disabled>
+        <span>Option 3 (disabled)</span>
+      </label>
     </fieldset>
+
+    <fieldset>
+      <legend>Checkboxes</legend>
+      <label class="cool-form-control">
+        <input type="checkbox" name="checkboxes" checked>
+        <span>Option 1 (checked)</span>
+      </label>
+      <label class="cool-form-control">
+        <input type="checkbox" name="checkboxes">
+        <span>Option 2</span>
+      </label>
+      <label class="cool-form-control">
+        <input type="checkbox" name="checkboxes" disabled>
+        <span>Option 3 (disabled)</span>
+      </label>
+    </fieldset>
+
+<!--
+    <div>
+      <label for="file">File Upload</label>
+      <input type="file" id="file" name="file">
+    </div>
+-->
+    <div class="cool-flex-row-8">
+      <button class="cool-button">Button</button>
+      <input type="button" value="Input Button" class="cool-button">
+      <input type="submit" value="Submit Button" class="cool-button">
+    </div>
   </form>
 
 </article>

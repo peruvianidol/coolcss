@@ -152,6 +152,7 @@
   line-height: 1.5rem;
 }
 .cool-input:is(select) {
+  appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpath d='M0 0h8L4 5z' fill='%236A7981'/%3E%3C/svg%3E%0A");
   background-size: auto 20%;
   background-position: center right 0.5rem;

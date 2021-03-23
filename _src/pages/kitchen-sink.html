@@ -140,26 +140,47 @@ title: Kitchen Sink
       <legend>Form Legend</legend>
       <div>
         <label for="text-input">Text Input</label>
-        <input type="text" id="text-input" name="text-input" placeholder="Placeholder">
+        <input type="text" id="text-input" name="text-input" placeholder="Placeholder" class="cool-input">
       </div>
 
       <div>
-        <label for="search-input">Search Input</label>
-        <input type="search" id="search-input" name="search-input" placeholder="Placeholder">
+        <label for="text-input">Disabled Text Input</label>
+        <input type="text" id="text-input" name="text-input" placeholder="Placeholder" class="cool-input" disabled>
       </div>
+
+      <!--<div>
+        <label for="search-input">Search Input</label>
+        <input type="search" id="search-input" name="search-input" placeholder="Placeholder" class="cool-input">
+      </div>-->
 
       <div>
         <label for="textarea">Textarea</label>
-        <textarea id="textarea" name="textarea" placeholder="Tell me your deepest, darkest secret"></textarea>
+        <textarea id="textarea" name="textarea" placeholder="Tell me your deepest, darkest secret" class="cool-input"></textarea>
+      </div>
+
+      <div>
+        <label for="textarea">Disabled Textarea</label>
+        <textarea id="textarea" name="textarea" placeholder="Tell me your deepest, darkest secret" class="cool-input" disabled></textarea>
       </div>
 
       <div>
         <label for="select">Select</label>
-        <select id="select" name="select">
+        <select id="select" name="select" class="cool-input">
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="select">Disabled Select</label>
+        <select id="select" name="select" class="cool-input" disabled>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        </div>
       </div>
 
       <div>

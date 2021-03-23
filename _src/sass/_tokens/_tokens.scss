@@ -4,8 +4,8 @@ $prefix: cool;
 $color-black: #000000;
 $color-gray-800: hsl(214, 5%, 10%); // #18191b
 $color-gray-600: hsl(201, 10%, 46%); // #6A7981
-$color-gray-400: hsl(191, 5%, 50%); // #798486
-$color-gray-200: hsl(193, 5%, 85%); // #D7DADB
+$color-gray-400: hsl(191, 5%, 75%); // #798486
+$color-gray-200: hsl(193, 5%, 90%); // #E4E6E7
 $color-white: #ffffff;
 
 $color-blue-800: hsl(214, 45%, 20%); // #1C304A
@@ -56,6 +56,19 @@ $color-text-interactive-hover: $color-blue-800;
 $color-text-error: $color-red-600;
 $color-text-inverse: $color-white;
 
-$color-border-default: $color-gray-400;
-$border-width-default: 1px;
+$color-icon-default: $color-gray-600;
+$color-icon-highlight: $color-blue-600;
 
+$color-background-default: $color-white;
+$color-background-disabled: $color-gray-200;
+
+$color-border-default: $color-gray-600;
+$color-border-focus: $color-blue-600;
+$color-border-disabled: $color-gray-400;
+$border-width-default: 1px;
+$border-width-thick: 2px;
+
+$form-field-width-default: 30ch;
+$form-field-padding: $spacing-8;
+$form-field-min-height: 44px;
+$form-field-arrow-size: auto 20%;

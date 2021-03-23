@@ -92,7 +92,7 @@
   padding: 1rem 2rem;
   font-size: 1.25rem;
   line-height: 1.875rem;
-  border: solid #798486;
+  border: solid #6a7981;
   border-width: 1px 0;
 }
 .cool-styles table {
@@ -100,7 +100,7 @@
 }
 .cool-styles th, .cool-styles td {
   padding: 0.25rem 0.5rem;
-  border: 1px solid #798486;
+  border: 1px solid #6a7981;
 }
 .cool-styles th, .cool-styles caption {
   text-align: left;
@@ -128,6 +128,48 @@
 }
 .cool-styles legend {
   font-weight: 600;
+}
+
+.cool-input {
+  appearance: none;
+  --form-field-width: 30ch;
+  background-color: #ffffff;
+  border: 2px solid #6a7981;
+  border-radius: 2px;
+  font-size: 1rem;
+  max-width: 100%;
+  width: var(--form-field-width, 30ch);
+  min-height: 44px;
+}
+.cool-input:not(textarea) {
+  line-height: 1.5;
+}
+.cool-input:not(.cool-select) {
+  padding: 0.5rem;
+}
+.cool-input:is(textarea) {
+  line-height: 1.5rem;
+}
+.cool-input:is(select) {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpath d='M0 0h8L4 5z' fill='%236A7981'/%3E%3C/svg%3E%0A");
+  background-size: auto 20%;
+  background-position: center right 0.5rem;
+}
+.cool-input:is(select):disabled {
+  color: #6a7981;
+}
+.cool-input:focus {
+  border-color: #046b9a;
+  box-shadow: 0 0 0.35em -0.1em #046b9a;
+  outline: 2px solid transparent;
+}
+.cool-input:disabled {
+  border-color: #bcc1c2;
+  background-color: #e4e6e7;
+  cursor: not-allowed;
+}
+.cool-input::placeholder {
+  color: #6a7981;
 }
 
 .cool-nav-list a {

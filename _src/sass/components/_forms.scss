@@ -111,8 +111,8 @@
         &[type="radio"]:before {
           content: "";
           display: block;
-          width: calc(#{$form-control-size} * .65);
-          height: calc(#{$form-control-size} * .65);
+          width: calc(#{$form-control-size} - 8px);
+          height: calc(#{$form-control-size} - 8px);
           background-color: $form-control-background;
           border-radius: 50%;
           position: absolute;
@@ -130,8 +130,6 @@
           background-size: calc(#{$form-control-size} * .65) calc(#{$form-control-size} * .65);
           background-position: 50% 50%;
         }
-
-
       }
 
       &:disabled {

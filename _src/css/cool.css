@@ -206,8 +206,8 @@
 .cool-form-control input:checked[type=radio]:before {
   content: "";
   display: block;
-  width: calc(1.5rem * .65);
-  height: calc(1.5rem * .65);
+  width: calc(1.5rem - 8px);
+  height: calc(1.5rem - 8px);
   background-color: #046b9a;
   border-radius: 50%;
   position: absolute;

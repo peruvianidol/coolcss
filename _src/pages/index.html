@@ -1,5 +1,5 @@
 <article class="cool-flow-24">
-  <h3 class="cool-heading-3">The last CSS framework I'll (hopefully) ever have to build.</h3>
+  <h2 class="cool-heading-3">The last CSS framework I'll (hopefully) ever have to build.</h2>
 
   <p>Between <a href="https://www.mikeaparicio.com/posts/2020-07-23-goodbye-groupon/">switching jobs</a> and starting <a href="https://11ty.recipes/">a bunch</a> of <a href="https://dogsof.dev/">side-projects</a>, I've found myself re-writing a lot of CSS in the past year. Wouldn't it be nice, I thought, if I could just write one CSS framework and use it on any project? <strong>cool.css</strong> is my attempt to do just that.</p>
 
@@ -27,7 +27,7 @@
 
   <p>Each new framework I had made over the years built on hard lessons learned from the last. One of the biggest issues that always eluded me was that no matter how good I made the framework, developers would always build their own styles on top of the framework, to varying degrees of success.</p>
 
-  <p>Eventually my process evolved into its own methodology, combining parts of <a href="http://smacss.com/">SMACCS</a>, <a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a>, <a href="https://tailwindcss.com/">Tailwind</a> and <a href="https://cube.fyi/">CUBE CSS</a>.</p>
+  <p>Eventually my process evolved into its own methodology, combining parts of <a href="http://smacss.com/">SMACCS</a>, <a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a>, <a href="https://tailwindcss.com/">Tailwind</a> and <a href="https://cube.fyi/">CUBE CSS</a>, into something that just about does everything I want it to do.</p>
 
   <p>The <strong>COOL</strong> methodology includes three types of styles.</p>
 
@@ -48,17 +48,17 @@
 
   <h4 class="cool-heading-4">Everything is scoped to the framework</h4>
 
-  <p>A lot of frameworks apply styles directly to HTML elements like <body>. This is fine if you're starting a new project, but if you're coming into an existing project with legacy styles, introducing a framework can cause conflicts with those styles.</p>
+  <p>A lot of frameworks apply styles directly to HTML elements like <code>&lt;body&gt;</code>. This is fine if you're starting a new project, but if you're coming into an existing project with legacy styles, introducing a framework can cause conflicts with those styles.</p>
 
   <p><strong>cool.css</strong> has a <code>$prefix</code> token that's appended to every selector in the framework. Styles which would otherwise be added directly to an element are instead scoped within a global class, <code>.#{$prefix}-styles</code>. (The default value of <code>$prefix</code> is "cool", so <code>.cool-styles</code>) You can apply this class to the body or, if you're slowly introducing the framework to an existing site, you can add it to a parent container where you want to use the framework.</p>
 
   <h4 class="cool-heading-4">A minimal reset</h4>
 
-  <p>Resets like CSS Reset or normalize.css are great for making things look the same across all browsers, but often require you to redeclare basic styles for each element. Besides that, browsers have improved over the years to the point where they aren't strictly necessary.</p>
+  <p>Resets like <a href="https://meyerweb.com/eric/tools/css/reset/">CSS Reset</a> or <a href="https://necolas.github.io/normalize.css/">normalize.css</a> are great for making things look the same across all browsers, but often require you to redeclare basic styles for each element. Besides that, browsers have improved over the years to the point where they aren't strictly necessary.</p>
 
   <p><strong>cool.css</strong> takes a slightly different approach, based largely on Andy Bell's <a href="https://piccalil.li/blog/a-modern-css-reset">Modern CSS Reset</a>.</p>
 
-  <p>In addition, <strong>cool.css</strong> resets margins and padding defaults so that we can apply them using utility classes. Having default margins on headers, for example, often requires developers to override the margin in different contexts.</p>
+  <p>In addition, <strong>cool.css</strong> resets margins and (some) padding defaults. Having default margins on header elements, for example, often requires developers to override the margin in different contexts. Instead, <strong>cool.css</strong> encourages the use of utility classes for controlling margins between elements.</p>
 
   <p><strong>cool.css</strong> also sets font properties to inherit. This encourages developers using the framework to select elements like headers semantically and use classes for applying visual styles, rather than selecting an <code>&lt;h2&gt;</code> because it's visually bigger than an <code>&lt;h3&gt;</code>, for example.</p>
 
@@ -74,7 +74,7 @@
 
   <p><strong>cool.css</strong> features a lot of helpful utility classes, but they are less about styling individual atomic components more for applying variations to default styles or arranging those components into larger molecules/organisms.</p>
 
-  <p>The goal is that you should be able to build any design without having to add any additional styles.</p>
+  <p>The goal is that you should be able to build any design without having to add additional styles.</p>
 
   <h4 class="cool-heading-4">Let the C in CSS do its thing</h4>
 
@@ -102,6 +102,8 @@
     .button-primary
 </pre>
 
+  <p>By limiting how often we declare the same styles in different contexts, we can greatly reduce the amount of CSS and markup required to design new product features and complex components.</p>
+
   <h4 class="cool-heading-4">The 12-column grid is dead, long live the 12-column grid</h4>
 
   <p>CSS frameworks have made the 12-column grid ubiquitous. These grids were born from a desire to mimic print designs. But we're not Swiss Modernists, we're just making websites, y'all.</p>
@@ -124,7 +126,7 @@
 
   <h4 class="cool-heading-4">Stack agnostic</h4>
 
-  <p><strong>cool.css</strong> is built with Sass but you don't necessarily even have to use Sass to use cool.css. You can just as easily add the compiled CSS to any project.</p>
+  <p><strong>cool.css</strong> is built with <a href="https://sass-lang.com/">Sass</a> but you don't necessarily even have to use Sass to use <strong>cool.css</strong>. You can just as easily add the compiled CSS to any project.</p>
 
   <h3 class="cool-heading-3">Making CSS cool</h3>
   
@@ -134,7 +136,7 @@
 
   <p><strong>Designers love it</strong> because the finished product ends up looking like their design with a lot less back and forth.</p>
 
-  <p><strong>Managers and other stakeholders love it</strong> because in frees up their teams to focus on the things they're good at.</p>
+  <p><strong>Managers and other stakeholders love it</strong> because it frees up their teams to focus on the things they're good at.</p>
 
   <p><strong>cool.css</strong> is not meant to compete with frameworks like Bootstrap or Tailwind. It's mostly a tool for me to quickly port common patterns between projects and make them visually distinct using design tokens. If you get some use out of the framework or the ideas of the COOL methodology, I'd love to hear about it. If you have constructive feedback I'd also love to hear it!</p>
 

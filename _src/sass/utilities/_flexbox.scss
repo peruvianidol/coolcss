@@ -1,17 +1,38 @@
 [class*=#{$prefix}-flex-row] {
   display: flex;
   align-items: center;
-}
 
-.#{$prefix}-flex-row {
   & :not(:last-child) {
     margin-right: $spacing-16;
   }
-  &-8 :not(:last-child) {
-    margin-right: $spacing-8;
+}
+
+[class*=#{$prefix}-flex-row-responsive] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  & :not(:last-child) {
+    margin-bottom: $spacing-16;
   }
-  &-4 :not(:last-child) {
-    margin-right: $spacing-4;
+}
+
+.#{$prefix} {
+  &-flex-row {
+    &-8 :not(:last-child) {
+      margin-right: $spacing-8;
+    }
+    &-4 :not(:last-child) {
+      margin-right: $spacing-4;
+    }  
+  }
+  &-flex-row-responsive {
+    &-8 :not(:last-child) {
+      margin-bottom: $spacing-8;
+    }
+    &-4 :not(:last-child) {
+      margin-bottom: $spacing-4;
+    }     
   }
 }
 
@@ -25,6 +46,29 @@
       > :not(last-child) {
         margin-right: $spacing-16;
       }
+    }
+  }
+  [class*=#{$prefix}-flex-row-responsive] {
+    flex-direction: row;
+
+    & :not(:last-child) {
+      margin-right: $spacing-16;
+    }
+  }
+  .#{$prefix} {
+    &-flex-row-responsive {
+      & :not(:last-child) {
+        margin-bottom: 0;
+        margin-right: $spacing-16;       
+      }
+      &-8 :not(:last-child) {
+        margin-bottom: 0;
+        margin-right: $spacing-8;
+      }
+      &-4 :not(:last-child) {
+        margin-bottom: 0;
+        margin-right: $spacing-4;
+      }     
     }
   }
 }

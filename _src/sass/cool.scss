@@ -1,10 +1,11 @@
-@import "functions";
-@import "_tokens/tokens";
+@import "abstracts/tokens";
+@import "abstracts/functions";
 @import "base/reset";
 @import "base/global";
 @import "components/forms";
 @import "components/navigation";
 @import "components/type";
+@import "components/tables";
 @import "utilities/spacing";
 @import "utilities/flexbox";
 @import "layout/single-column";

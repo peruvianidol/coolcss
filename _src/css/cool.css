@@ -28,6 +28,7 @@
 .cool-styles ul[role=list],
 .cool-styles ol[role=list] {
   list-style: none;
+  padding: 0;
 }
 .cool-styles dt {
   font-weight: 600;
@@ -41,6 +42,9 @@
 .cool-styles code,
 .cool-styles pre {
   font-family: monospace;
+}
+.cool-styles pre {
+  white-space: pre-wrap;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -98,17 +102,12 @@
 .cool-styles table {
   border-collapse: collapse;
 }
-.cool-styles th, .cool-styles td {
-  padding: 0.25rem 0.5rem;
-  border: 1px solid #6a7981;
-}
 .cool-styles th, .cool-styles caption {
   text-align: left;
 }
-.cool-styles caption {
-  padding: 0.25rem 0;
-}
 .cool-styles figcaption {
+  font-size: 1rem;
+  line-height: 1.5rem;
   padding: 0.25rem 0;
 }
 .cool-styles ul, .cool-styles ol {
@@ -138,9 +137,13 @@
   border: 2px solid #6a7981;
   border-radius: 4px;
   font-size: 1rem;
-  max-width: 100%;
-  width: var(--form-field-width, 30ch);
+  width: 100%;
   min-height: 44px;
+}
+@media (min-width: 700px) {
+  .cool-input {
+    width: var(--form-field-width, 30ch);
+  }
 }
 .cool-input:not(textarea) {
   line-height: 1.5;
@@ -250,6 +253,9 @@
   background-color: #1c304a;
 }
 
+.cool-nav-list {
+  margin: 0;
+}
 .cool-nav-list a {
   color: #6a7981;
   text-decoration: none;
@@ -294,6 +300,74 @@
   color: #e12d4b;
 }
 
+.cool-table {
+  --label-min-width: 100px;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.cool-table thead th {
+  display: none;
+}
+.cool-table tbody tr {
+  display: block;
+}
+.cool-table tbody tr:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.cool-table tbody tr:first-of-type td:first-of-type {
+  border-top: 1px solid #6a7981;
+  padding-top: 1rem;
+}
+.cool-table tbody td {
+  display: flex;
+  align-items: flex-start;
+}
+.cool-table tbody td:last-of-type {
+  border-bottom: 1px solid #6a7981;
+  padding-bottom: 1rem;
+}
+.cool-table tbody td[data-label]:before {
+  content: attr(data-label);
+  font-weight: 600;
+  min-width: var(--label-min-width);
+}
+.cool-table th, .cool-table td, .cool-table caption {
+  padding: 0.25rem 0;
+}
+@media (min-width: 700px) {
+  .cool-table {
+    font-variant-numeric: tabular-nums;
+  }
+  .cool-table tbody tr {
+    display: table-row;
+    border-bottom: 1px solid #6a7981;
+  }
+  .cool-table tbody tr:first-of-type {
+    border-top: 1px solid #6a7981;
+  }
+  .cool-table tbody tr:first-of-type td:first-of-type {
+    border-top: none;
+    padding-top: 0.25rem;
+  }
+  .cool-table thead th,
+.cool-table tbody td {
+    display: table-cell;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .cool-table tbody td {
+    vertical-align: top;
+  }
+  .cool-table tbody td:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0.25rem;
+  }
+  .cool-table tbody td[data-label]:before {
+    display: none;
+  }
+}
+
 .cool-flow-16 > :not(:last-child) {
   margin-bottom: 1rem;
 }
@@ -308,15 +382,30 @@
   display: flex;
   align-items: center;
 }
-
-.cool-flex-row :not(:last-child) {
+[class*=cool-flex-row] :not(:last-child) {
   margin-right: 1rem;
 }
+
+[class*=cool-flex-row-responsive] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+[class*=cool-flex-row-responsive] :not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 .cool-flex-row-8 :not(:last-child) {
   margin-right: 0.5rem;
 }
 .cool-flex-row-4 :not(:last-child) {
   margin-right: 0.25rem;
+}
+.cool-flex-row-responsive-8 :not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.cool-flex-row-responsive-4 :not(:last-child) {
+  margin-bottom: 0.25rem;
 }
 
 @media (min-width: 700px) {
@@ -327,6 +416,26 @@
   }
   .cool-space-between > :not(last-child) {
     margin-right: 1rem;
+  }
+
+  [class*=cool-flex-row-responsive] {
+    flex-direction: row;
+  }
+  [class*=cool-flex-row-responsive] :not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .cool-flex-row-responsive :not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+  .cool-flex-row-responsive-8 :not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+  }
+  .cool-flex-row-responsive-4 :not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 0.25rem;
   }
 }
 .cool-layout-single-column {

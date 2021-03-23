@@ -43,17 +43,12 @@
   table {
     border-collapse: collapse;
   }
-  th, td {
-    padding: $spacing-4 $spacing-8;
-    border: 1px solid $color-border-default;
-  }
   th, caption {
     text-align: left;
   }
-  caption {
-    padding: $spacing-4 0;
-  }
   figcaption {
+    font-size: $text-medium-font-size;
+    line-height: $text-medium-line-height;
     padding: $spacing-4 0;
   }
   ul, ol {

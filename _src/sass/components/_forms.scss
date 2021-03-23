@@ -27,9 +27,12 @@
     border: $border-width-thick solid $color-border-default;
     border-radius: $border-radius-medium;
     font-size: $text-medium-font-size;
-    max-width: 100%;
-    width: var(--form-field-width, $form-field-width-default);
+    width: 100%;
     min-height: $form-field-min-height;
+
+    @media (min-width: $breakpoint-medium) {
+      width: var(--form-field-width, $form-field-width-default);
+    }
 
     &:not(textarea) {
       line-height: 1.5;

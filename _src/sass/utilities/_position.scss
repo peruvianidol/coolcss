@@ -1,0 +1,12 @@
+@media (min-width: $breakpoint-medium) {
+  .#{$prefix} {
+    &-left {
+      float: left;
+      margin-right: $spacing-16;
+    }
+    &-right {
+      float: right;
+      margin-left: $spacing-16;
+    }
+  }
+}

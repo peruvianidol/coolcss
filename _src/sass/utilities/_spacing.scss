@@ -10,4 +10,10 @@
   &-stack-16 {
     margin-bottom: $spacing-16;
   }
+
+  @media (min-width: $breakpoint-medium) {
+    &-half-width {
+      width: 50%;
+    }
+  }
 }

@@ -16,7 +16,6 @@
 .#{$prefix}-styles {
   text-rendering: optimizeSpeed;
 
-  // not sure if this can be applied to body instead of html
   &:focus-within {
     scroll-behavior: smooth;
   }

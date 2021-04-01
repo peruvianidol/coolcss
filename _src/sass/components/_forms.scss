@@ -1,12 +1,12 @@
 .#{$prefix}-styles {
   label:not(.#{$prefix}-form-control) {
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     display: block;
     margin-bottom: $spacing-4;
 
     [type="checkbox"] + span,
     [type="radio"] + span {
-      font-weight: 400;
+      font-weight: $font-weight-normal;
     }
   }
 
@@ -15,7 +15,7 @@
   }
 
   legend {
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
   }
 }
 

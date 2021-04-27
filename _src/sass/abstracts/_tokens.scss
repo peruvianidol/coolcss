@@ -1,35 +1,49 @@
 // all of your selectors will be prefixed with this.
-$prefix: cool;
+$prefix: able;
 
+// Ableton color palette
 $color-black: #000000;
+$color-gray-400: hsl(0, 0%, 58%); // #949494
+$color-gray-200: hsl(0, 0%, 93%); // #eeeeee
+$color-gray-100: hsl(0, 0%, 95%); // #f3f3f3 
+$color-white: #ffffff;
+$color-blue-600: hsl(240, 100%, 50%); // #0000ff
+$color-orange-600: hsl(6, 98%, 46%); // #E81902
+$color-orange-400: hsl(6, 98%, 64%); // #FD5948
+
+$color-yellow-200: hsl(63, 100%, 83%); // #FBFFA7
+$color-green-200: hsl(128, 100%, 86%); // #B6FFC0
+$color-purple-200: hsl(267, 100%, 85%); //#D5B3FF
+$color-blue-200: hsl(225, 100%, 82%); // #a3baff
+
+$color-social-facebook: hsl(221, 44%, 41%);
+$color-social-twitter:	hsl(203, 89%, 53%);
+$color-social-youtube: hsl(0, 100%, 50%);
+$color-social-instagram: hsl(20, 92%, 59%);
+
+// Unused Cool CSS colors
 $color-gray-800: hsl(200, 10%, 12%); // #1c2022
 $color-gray-600: hsl(200, 10%, 37%); // #556168
 $color-gray-400: hsl(200, 10%, 62%); // #94a1a8
-$color-gray-200: hsl(200, 10%, 87%); // #dbdfe1
-$color-white: #ffffff;
-$color-orange-600: hsl(6, 98%, 64%); // #ff764d
 
 $color-blue-800: hsl(200, 75%, 12%); // #082636
-$color-blue-600: hsl(200, 75%, 37%); // #1876a5
 $color-blue-400: hsl(200, 75%, 62%); // #55b6e7
 $color-blue-200: hsl(200, 75%, 87%); // #c5e6f7
 
 $color-red-800: hsl(350, 75%, 12%); // #36080f
 $color-red-600: hsl(350, 75%, 37%); // #a6172f
-$color-red-400: hsl(350, 75%, 62%); // #e7556e
 $color-red-200: hsl(350, 75%, 87%); // #f7c5cd
 
-$font-family: Rubik, sans-serif;
+$font-family: Futura, sans-serif;
 
 $font-weight-normal: 400;
-$font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
 $heading-1-font-size: 2.5rem;
 $heading-1-line-height: 3rem;
-$heading-2-font-size: 2rem;
-$heading-2-line-height: 2.5rem;
+$heading-2-font-size: 1.875rem;
+$heading-2-line-height: 2.625rem;
 $heading-3-font-size: 1.5rem;
 $heading-3-line-height: 2rem;
 $heading-4-font-size: 1.25rem;
@@ -40,16 +54,19 @@ $text-large-line-height: 1.875rem;
 $text-medium-font-size: 1rem;
 $text-medium-line-height: 1.5rem;
 $text-small-font-size: .875rem;
-$text-small-line-height: 1.25rem;
+$text-small-line-height: 1.3125rem;
 
 $spacing-4: .25rem;
+$spacing-5: .3125rem;
 $spacing-8: .5rem;
 $spacing-10: .625rem;
+$spacing-12: .75rem;
 $spacing-16: 1rem;
 $spacing-20: 1.25rem;
 $spacing-24: 1.5rem;
 $spacing-30: 1.875rem;
 $spacing-32: 2rem;
+$spacing-40: 2.5rem;
 $spacing-60: 3.75rem;
 $spacing-64: 4rem;
 $spacing-100: 6.25rem;
@@ -60,36 +77,49 @@ $sidebar-width: 200px;
 $container-max-width: calc(#{$sidebar-width} + #{$max-line-length});
 $breakpoint-medium: 700px;
 
-$color-text-body: $color-gray-800;
+$icon-size-large: 40px;
+
+$color-text-body: $color-black;
 $color-text-subdued: $color-gray-600;
 $color-text-interactive: $color-blue-600;
 $color-text-interactive-hover: $color-blue-800;
 $color-text-error: $color-red-600;
 $color-text-inverse: $color-white;
-$color-text-brand: $color-orange-600;
+$color-text-brand: $color-orange-400;
 
 $color-icon-default: $color-gray-600;
 $color-icon-highlight: $color-blue-600;
 $color-icon-inverse: $color-white;
 
-$color-background-default: $color-white;
+$color-background-default: $color-gray-100;
+$color-background-surface: $color-white;
 $color-background-disabled: $color-gray-200;
 
-$color-border-default: $color-gray-600;
+$color-border-default: $color-gray-200;
 $color-border-focus: $color-blue-600;
 $color-border-disabled: $color-gray-400;
 
-$border-width-default: 1px;
+$border-width-default: 2px;
 $border-width-thick: 2px;
 
 $border-radius-small: 2px;
 $border-radius-medium: 4px;
 
 $form-field-width-default: 30ch;
-$form-field-padding: $spacing-8;
-$form-field-min-height: 44px;
+$form-field-padding: $spacing-4 $spacing-12;
+$form-field-min-height: 34px;
 $form-field-arrow-size: auto 20%;
+$form-field-border-radius: 0;
+$form-field-border: 0;
+$form-field-background-color: $color-gray-200;
+$form-field-background-position: center right $spacing-12;
 $form-control-size: $spacing-24;
 $form-control-background: $color-blue-600;
 $form-control-background-highlight: $color-blue-800;
 $form-control-border: $color-blue-600;
+
+$button-radius: 0;
+$button-border: 0;
+$button-min-height: 34px;
+$button-padding: $spacing-4 $spacing-24;
+$button-font-weight: $font-weight-semibold;

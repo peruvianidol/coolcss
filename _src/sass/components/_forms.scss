@@ -23,9 +23,9 @@
   &-input {
     appearance: none;
     --form-field-width: #{$form-field-width-default};
-    background-color: $color-white;
-    border: $border-width-thick solid $color-border-default;
-    border-radius: $border-radius-medium;
+    background-color: $form-field-background-color;
+    border: $form-field-border;
+    border-radius: $form-field-border-radius;
     font-size: $text-medium-font-size;
     width: 100%;
     min-height: $form-field-min-height;
@@ -53,7 +53,7 @@
       appearance: none;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpath d='M0 0h8L4 5z' fill='#{$arrow-color}'/%3E%3C/svg%3E%0A");
       background-size: $form-field-arrow-size;
-      background-position: center right $form-field-padding;
+      background-position: $form-field-background-position;
 
       &:disabled {
         color: $color-text-subdued;
@@ -149,14 +149,16 @@
   &-button {
     display: inline-block;
     appearance: none;
-    border: $border-width-thick solid transparent;
-    border-radius: $border-radius-medium;
-    padding: $form-field-padding;
+    border: $button-border;
+    border-radius: $button-radius;
+    padding: $button-padding;
     margin: 0;
     background-color: $form-control-background;
     color: $color-text-inverse;
     font-size: $text-medium-font-size;
     line-height: $text-medium-line-height;
+    font-weight: $button-font-weight;
+    min-height: $button-min-height;
     cursor: pointer;
 
     &:focus {

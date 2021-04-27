@@ -4,7 +4,12 @@
   font-family: $font-family;
   font-size: $text-medium-font-size;
   line-height: $text-medium-line-height;
+  background-color: $color-background-default;
 
+  img,
+  svg {
+    display: block;
+  }
   figure img,
   figure video,
   figure picture {
@@ -12,11 +17,12 @@
   }
   a {
     color: $color-text-interactive;
+    text-decoration: none;
     text-underline-offset: 2px;
     
-    &:hover {
-      color: $color-text-interactive-hover;
-    }
+    // &:hover {
+    //   color: $color-text-interactive-hover;
+    // }
   }
   code {
     display: inline-block;

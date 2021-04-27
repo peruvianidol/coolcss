@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{{ '/css/ableton.css' | url }}">
+  <title>Ableton</title>
+</head>
+<body class="able-styles" style="overflow-y: scroll">
+  {% include "partials/makeovers/ableton/svg-sprite.html" %}
+  <div class="able-layout-header-main-footer">
+    <header data-grid-area="header">
+      <div class="able-flex-row-30 able-inset-square-20 able-border-bottom">
+        <a href="" aria-label="Ableton">
+          <svg width="60" height="28" role="img">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </a>
+        <nav class="able-flex-item">
+          <ul class="able-nav-list" role="list">
+            <li><a href="">Live</a></li>
+            <li><a href="">Push</a></li>
+            <li><a href="">Link</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Packs</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="" class="able-flex-row-8"><span>More</span><svg width="12" height="12" aria-hidden="true">
+            <use xlink:href="#icon-plus"></use>
+          </svg></a></li>
+          </ul>
+        </nav>
+        <div class="able-flex-row-30">
+          <a href="" class="able-text-large"><strong>Try Live for free</strong></a>
+          <a href="" class="able-text-small able-chevron-link able-text-inherit"><strong>Log in or register</strong></a>
+        </div>
+      </div>
+      <div class="able-inset-square-20">
+        <ul class="able-nav-list-small" role="list">
+          <li><a href="" class="able-is-active">About</a></li>
+          <li><a href="">Jobs</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main data-grid-area="main">
+      {{ content | safe }}
+    </main>
+
+    <footer class="able-border-top able-inset-vertical-120"  data-grid-area="footer">
+      <svg width="188" height="45" role="img" class="able-stack-60">
+        <use xlink:href="#icon-wordmark"></use>
+      </svg>
+      <div class="able-layout-30-30-40 able-stack-60">
+        <div>
+          <ul role="list" class="able-stack-10">
+            <li><a href="" class="able-chevron-link able-text-inherit">Register Live or Push</a></li>
+            <li><a href="" class="able-chevron-link able-text-inherit">About Ableton</a></li>
+            <li><a href="" class="able-chevron-link able-text-inherit">Jobs</a></li>
+          </ul>
+          <ul role="list" class="able-flex-row-10">
+            <li><a href="">
+              <svg width="40" height="40" role="img" class="able-icon-social-facebook">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+            </a></li>
+            <li><a href="">
+              <svg width="40" height="40" role="img" class="able-icon-social-twitter">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a></li>
+            <li><a href="">
+              <svg width="40" height="40" role="img" class="able-icon-social-youtube">
+                <use xlink:href="#icon-youtube"></use>
+              </svg>
+            </a></li>
+            <li><a href="">
+              <svg width="40" height="40" role="img" class="able-icon-social-instagram">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="able-text-strong">Education</h3>
+          <ul role="list">
+            <li><a href="" class="able-chevron-link able-text-inherit">Offers for students and teachers</a></li>
+            <li><a href="" class="able-chevron-link able-text-inherit">Offers for institutions</a></li>
+            <li><a href="" class="able-chevron-link able-text-inherit">Push 1 trade-in initiative</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="able-text-strong">Sign up to our newsletter</h3>
+          <p class="able-stack-20">Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys and more.</p>
+          <form class="able-flex-row-0">
+            <input type="text" placeholder="Email Address" name="email" class="able-input able-flex-item">
+            <button class="able-button">Sign up</button>
+          </form>
+        </div>
+      </div>
+      <div class="able-layout-30-30-40 able-stack-60">
+        <div>
+          <h3 class="able-text-strong">Community</h3>
+          <ul role="list">
+            <li><a href="" class="able-chevron-link able-text-inherit">Find Ableton User Groups</a></li>
+            <li><a href="" class="able-chevron-link able-text-inherit">Find Certified Training</a></li>
+            <li><a href="" class="able-chevron-link able-text-inherit">Become a Certified Trainer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="able-text-strong">Distributors</h3>
+          <ul role="list">
+            <li><a href="" class="able-chevron-link able-text-inherit">Find Distributors</a></li>
+            <li><a href="" class="able-chevron-link able-text-inherit">Try Push in-store</a></li>
+          </ul>
+        </div>
+        <form>
+          <h3 class="able-text-strong able-stack-10">Language and Location</h3>
+          <div class="able-flex-row-4">
+            <select name="lang" class="able-input" style="--form-field-width: auto; padding-right: 30px;">
+              <option>English</option>
+            </select>
+            <select name="location" class="able-input">
+              <option>United States</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="able-space-between">
+        <ul class="able-nav-list-small able-nav-list-tight" role="list">
+          <li><a href="">Archive</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Press Resources</a></li>
+          <li><a href="">Legal Info</a></li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Cookie Settings</a></li>
+          <li><a href="">Imprint</a></li>
+        </ul>
+        <div class="able-flex-row-16">
+          <strong class="able-text-small">Made in Berlin</strong>
+          <svg width="45" height="21" role="img">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

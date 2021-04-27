@@ -15,6 +15,7 @@
 
 .#{$prefix}-styles {
   text-rendering: optimizeSpeed;
+  -moz-osx-font-smoothing: grayscale;
 
   &:focus-within {
     scroll-behavior: smooth;

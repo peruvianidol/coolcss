@@ -1,12 +1,41 @@
-.#{$prefix}-nav-list {
-  margin: 0;
+.#{$prefix}-nav-list,
+.#{$prefix}-nav-list-small {
+  display: flex;
+  font-weight: $font-weight-semibold;
+  font-size: $text-large-font-size;
+  line-height: $text-large-line-height;
   a {
-    color: $color-text-subdued;
+    display: flex;
+    color: $color-text-body;
     text-decoration: none;
+    padding: 0 $spacing-10;
+    &:hover {
+      color: inherit;
+    }
   }
-  
-  a:hover {
-    color: $color-text-interactive;
-    text-decoration: underline;
+  li:first-of-type a {
+    padding-left: 0;
+  }
+  li:last-of-type a {
+    padding-right: 0;
+  }
+
+  > :not(:last-child) {
+    margin-right: $spacing-10;
+  }
+}
+
+.#{$prefix}-nav-list-small {
+  font-size: $text-small-font-size;
+  line-height: $text-small-line-height;
+
+  .#{$prefix}-is-active {
+    color: $color-orange-600;
+  }
+}
+
+.#{$prefix}-nav-list-tight {
+  > :not(:last-child) {
+    margin-right: 0;
   }
 }

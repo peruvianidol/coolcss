@@ -33,4 +33,34 @@
   &-text-error {
     color: $color-text-error;
   }
+  &-text-strong {
+    font-weight: $font-weight-bold;
+  }
+  &-text-brand {
+    color: $color-text-brand;
+  }
+}
+a.#{$prefix}-text-inherit {
+  color: inherit;
+}
+
+a.#{$prefix}-chevron-link {
+  display: inline-flex;
+  align-items: center;
+  &:after {
+    content: "";
+    display: block;
+    width: .5em;
+    height: .5em;
+    background-image: $icon-chevron-right-blue;
+    margin-left: $spacing-4;
+    position: relative;
+    top: .125em;
+  }
+}
+
+a.#{$prefix}-chevron-link.#{$prefix}-text-inherit {
+  &:after {
+    background-image: $icon-chevron-right-black;
+  }
 }

@@ -1,0 +1,25 @@
+.#{$prefix} {
+  &-icon {
+    fill: currentColor;
+    width: $icon-size-large;
+    height: $icon-size-large;
+  }
+  &-icon-social-facebook {
+    background-color: $color-social-facebook;
+  }
+  &-icon-social-twitter {
+    background-color: $color-social-twitter;
+  }
+  &-icon-social-youtube {
+    background-color: $color-social-youtube;
+  }
+  &-icon-social-instagram {
+    background-color: $color-social-instagram;
+  }    
+}
+[class*=icon-social] {
+  fill: $color-white;
+}
+.#{$prefix}-icon-wordmark {
+  fill: $color-text-brand;
+}

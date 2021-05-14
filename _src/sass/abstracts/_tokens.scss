@@ -1,12 +1,14 @@
 // all of your selectors will be prefixed with this.
 $prefix: cool;
 
-$color-black: #000000;
+// Global Tokens
+
+$color-black: hsl(0, 0%, 0%); // #000000
 $color-gray-800: hsl(200, 10%, 12%); // #1c2022
 $color-gray-600: hsl(200, 10%, 37%); // #556168
 $color-gray-400: hsl(200, 10%, 62%); // #94a1a8
 $color-gray-200: hsl(200, 10%, 87%); // #dbdfe1
-$color-white: #ffffff;
+$color-white: hsl(0, 0%, 100%); // #ffffff
 
 $color-blue-800: hsl(200, 75%, 12%); // #082636
 $color-blue-600: hsl(200, 75%, 37%); // #1876a5
@@ -29,10 +31,8 @@ $heading-4-line-height: 1.875rem;
 
 $text-large-font-size: 1.25rem;
 $text-large-line-height: 1.875rem;
-
 $text-medium-font-size: 1rem;
 $text-medium-line-height: 1.5rem;
-
 $text-small-font-size: .875rem;
 $text-small-line-height: 1.25rem;
 
@@ -53,6 +53,8 @@ $sidebar-width: 200px;
 $container-max-width: calc(#{$sidebar-width} + #{$max-line-length});
 $breakpoint-medium: 700px;
 
+// Contextual Tokens
+
 $color-text-body: $color-gray-800;
 $color-text-subdued: $color-gray-600;
 $color-text-interactive: $color-blue-600;
@@ -67,8 +69,9 @@ $color-icon-inverse: $color-white;
 $color-background-default: $color-white;
 $color-background-disabled: $color-gray-200;
 
-$color-border-default: $color-gray-600;
-$color-border-focus: $color-blue-600;
+$color-border-default: $color-gray-200;
+$color-border-input: $color-gray-600;
+$color-border-focus: $color-blue-400;
 $color-border-disabled: $color-gray-400;
 
 $border-width-default: 1px;
@@ -77,11 +80,38 @@ $border-width-thick: 2px;
 $border-radius-small: 2px;
 $border-radius-medium: 4px;
 
+$shadow-focus: 0 0 .35em -.1em $color-border-focus;
+
+
+// Component Tokens
+
+$form-label-font-weight: $font-weight-semibold;
+$form-label-margin: $spacing-4;
+
+$form-field-background-color: $color-white;
+$form-field-border: $border-width-thick solid $color-border-input;
+$form-field-border-radius: $border-radius-medium;
+$form-field-font-size: $text-medium-font-size;
+$form-field-line-height: $text-medium-line-height;
 $form-field-width-default: 30ch;
 $form-field-padding: $spacing-8;
-$form-field-min-height: 44px;
 $form-field-arrow-size: auto 20%;
+$form-field-arrow-inset: $spacing-8;
+$form-field-disabled-text-color: $color-text-subdued;
+
+$form-control-font-weight: $font-weight-normal;
 $form-control-size: $spacing-24;
+$form-control-size-inner: $form-control-size * .65;
 $form-control-background: $color-blue-600;
 $form-control-background-highlight: $color-blue-800;
-$form-control-border: $color-blue-600;
+$form-control-border-color: $color-blue-600;
+$form-control-checkbox-radius: $border-radius-small;
+
+$button-border: $border-width-thick solid transparent;
+$button-border-radius: $border-radius-medium;
+$button-padding: $spacing-8;
+$button-background: $color-blue-600;
+$button-background-highlight: $color-blue-800;
+$button-text-color: $color-text-inverse;
+$button-font-size: $text-medium-font-size;
+$button-line-height: $text-medium-line-height;

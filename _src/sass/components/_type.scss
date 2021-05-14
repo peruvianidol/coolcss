@@ -33,4 +33,10 @@
   &-text-error {
     color: $color-text-error;
   }
+  &-text-strong {
+    font-weight: $font-weight-semibold;
+  }
+}
+a.#{$prefix}-text-inherit {
+  color: inherit;
 }

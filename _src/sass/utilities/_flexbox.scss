@@ -1,71 +1,99 @@
-[class*=#{$prefix}-flex-row] {
+[class*="#{$prefix}-flex-row"],
+[class*="#{$prefix}-space-between"] {
   display: flex;
   align-items: center;
 
-  & :not(:last-child) {
+  > :not(:last-child) {
     margin-right: $spacing-16;
   }
 }
 
-[class*=#{$prefix}-flex-row-responsive] {
-  display: flex;
+[class*="#{$prefix}-space-between"] {
+  justify-content: space-between;
+}
+
+[class*="#{$prefix}-flex-row-responsive"] {
   flex-direction: column;
   align-items: flex-start;
-
-  & :not(:last-child) {
-    margin-bottom: $spacing-16;
-  }
 }
 
 .#{$prefix} {
   &-flex-row {
-    &-8 :not(:last-child) {
+    &-4 > :not(:last-child) {
+      margin-right: $spacing-4;
+    }
+    &-8 > :not(:last-child) {
       margin-right: $spacing-8;
     }
-    &-4 :not(:last-child) {
-      margin-right: $spacing-4;
-    }  
+    &-24 > :not(:last-child) {
+      margin-right: $spacing-24;
+    }
+    &-32 > :not(:last-child) {
+      margin-right: $spacing-32;
+    }
   }
   &-flex-row-responsive {
-    &-8 :not(:last-child) {
+    &-4 > :not(:last-child) {
+      margin-bottom: $spacing-4;
+    }
+    &-8 > :not(:last-child) {
       margin-bottom: $spacing-8;
     }
-    &-4 :not(:last-child) {
-      margin-bottom: $spacing-4;
-    }     
+    &-24 > :not(:last-child) {
+      margin-bottom: $spacing-24;
+    }
+    &-32 > :not(:last-child) {
+      margin-bottom: $spacing-32;
+    }
+  }
+  &-flex-item {
+    flex: 1;
+  }
+  &-flex-no-shrink {
+    flex-shrink: 0;
+  }
+  &-flex-reverse {
+    flex-direction: row-reverse;
+  }
+  &-justify-center {
+    justify-content: center;
+  }
+  &-justify-end {
+    justify-content: end;
+  }
+  &-align-self-start {
+    align-self: start;
+  }
+  &-align-self-end {
+    align-self: end;
+  }
+  &-align-self-center {
+    align-self: center;
+  }
+  &-flex-wrap {
+    flex-wrap: wrap;
+  }
+  &-flex-inline {
+    display: inline-flex;
   }
 }
 
 @media (min-width: $breakpoint-medium) {
-  .#{$prefix} {
-    &-space-between {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      
-      > :not(last-child) {
-        margin-right: $spacing-16;
-      }
-    }
-  }
-  [class*=#{$prefix}-flex-row-responsive] {
+  [class*="#{$prefix}-flex-row-responsive"] {
     flex-direction: row;
-
-    & :not(:last-child) {
-      margin-right: $spacing-16;
-    }
   }
+
   .#{$prefix} {
     &-flex-row-responsive {
-      & :not(:last-child) {
+      > :not(:last-child) {
         margin-bottom: 0;
         margin-right: $spacing-16;       
       }
-      &-8 :not(:last-child) {
+      &-8 > :not(:last-child) {
         margin-bottom: 0;
         margin-right: $spacing-8;
       }
-      &-4 :not(:last-child) {
+      &-4 > :not(:last-child) {
         margin-bottom: 0;
         margin-right: $spacing-4;
       }     

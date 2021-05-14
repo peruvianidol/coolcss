@@ -1,0 +1,7 @@
+$arrow-color: encodecolor($color-icon-default);
+
+$icon-arrow-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpath d='M0 0h8L4 5z' fill='#{$arrow-color}'/%3E%3C/svg%3E%0A");
+
+$checkbox-color: encodecolor($color-icon-inverse);
+
+$icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M12 30c-.5 0-1-.2-1.4-.6l-8-8c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0l6.3 6.3 14.6-22c.6-.9 1.9-1.2 2.8-.6.9.6 1.2 1.9.6 2.8l-16 24c-.3.5-.9.8-1.5.9H12z' fill='#{$checkbox-color}'/%3E%3C/svg%3E%0A");

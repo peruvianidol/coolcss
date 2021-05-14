@@ -1,14 +1,92 @@
 .#{$prefix} {
+  &-flow-4 > :not(:last-child) {
+    margin-bottom: $spacing-4;
+  }
+  &-flow-8 > :not(:last-child) {
+    margin-bottom: $spacing-8;
+  }
   &-flow-16 > :not(:last-child) {
     margin-bottom: $spacing-16;
   }
-
   &-flow-24 > :not(:last-child) {
     margin-bottom: $spacing-24;
   }
+  &-flow-32 > :not(:last-child) {
+    margin-bottom: $spacing-32;
+  }
 
+  &-stack-4 {
+    margin-bottom: $spacing-4;
+  }
+  &-stack-8 {
+    margin-bottom: $spacing-8;
+  }
   &-stack-16 {
     margin-bottom: $spacing-16;
+  }
+  &-stack-24 {
+    margin-bottom: $spacing-24;
+  }
+  &-stack-32 {
+    margin-bottom: $spacing-32;
+  }
+
+  &-inline-4 {
+    margin-right: $spacing-4;
+  }
+  &-inline-8 {
+    margin-right: $spacing-8;
+  }
+  &-inline-16 {
+    margin-right: $spacing-16;
+  }
+  &-inline-24 {
+    margin-right: $spacing-24;
+  }
+  &-inline-32 {
+    margin-right: $spacing-32;
+  }
+
+  &-inset-square-4 {
+    padding: $spacing-4;
+  }
+  &-inset-square-8 {
+    padding: $spacing-8;
+  }
+  &-inset-square-16 {
+    padding: $spacing-16;
+  }
+  &-inset-square-24 {
+    padding: $spacing-24;
+  }
+  &-inset-square-32 {
+    padding: $spacing-32;
+  }
+
+  &-inset-squish-8 {
+    padding: $spacing-4 $spacing-8;
+  }
+  &-inset-squish-16 {
+    padding: $spacing-8 $spacing-16;
+  }
+  &-inset-squish-24 {
+    padding: $spacing-16 $spacing-24;
+  }
+  &-inset-squish-32 {
+    padding: $spacing-24 $spacing-32;
+  }
+
+  &-inset-stretch-8 {
+    padding: $spacing-8 $spacing-4;
+  }
+  &-inset-stretch-16 {
+    padding: $spacing-16 $spacing-8;
+  }
+  &-inset-stretch-24 {
+    padding: $spacing-24 $spacing-16;
+  }
+  &-inset-stretch-32 {
+    padding: $spacing-32 $spacing-24;
   }
 
   @media (min-width: $breakpoint-medium) {

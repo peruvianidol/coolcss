@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7a793a16-86fd-4a2e-a74e-70f211a84c91/deploy-status)](https://app.netlify.com/sites/coolcss/deploys)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/peruvianidol/coolcss/)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/peruvianidol/coolcss)
 
 # cool.css
 

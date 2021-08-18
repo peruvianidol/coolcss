@@ -1,0 +1,13 @@
+---
+component: "Text Inherit"
+---
+
+{% set description %}
+<p>Use <code>.{{ framework.prefix }}-text-inherit</code> on anchor elements to inherit the text color of its parent elements rather than use the default link color.</p>
+{% endset %}
+
+{% set html %}
+<p><a href="#" class="{{ framework.prefix }}-text-inherit">This is a link that inherits its color from its parent element.</a></p>
+{% endset %}
+
+{% include "code.njk" %}

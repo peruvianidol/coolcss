@@ -1,4 +1,7 @@
 .#{$prefix} {
+  &-bordered {
+    border: $border-width-default solid $color-border-default;
+  }
   &-border-bottom {
     border-bottom: $border-width-default solid $color-border-default;
   }

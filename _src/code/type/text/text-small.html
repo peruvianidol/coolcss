@@ -1,0 +1,13 @@
+---
+component: "Text Small"
+order: 7
+---
+{% set meta %}
+{{ tokens.text['300'].fontSize.comments }} / {{ tokens.text['300'].lineHeight.comments }}
+{% endset %}
+
+{% set html %}
+<p class="{{ framework.prefix }}-text-small">BALTIMORE—In a new study published Friday in the Journal Of Abnormal Psychology, researchers at Johns Hopkins University concluded there was no greater sign of delusion than when, on your last day of work, you send coworkers your personal email address in hopes of keeping in touch.</p>
+{% endset %}
+
+{% include "code.njk" %}

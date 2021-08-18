@@ -1,0 +1,4 @@
+{
+  "layout": "base",
+  "permalink": "/components/{{ title | slug }}/"
+}

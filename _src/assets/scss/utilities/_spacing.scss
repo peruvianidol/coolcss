@@ -1,17 +1,17 @@
 .#{$prefix} {
-  &-flow-4 > :not(:last-child) {
+  &-flow-4 > :not(:last-child):not([class*="-stack"]) {
     margin-bottom: $spacing-4;
   }
-  &-flow-8 > :not(:last-child) {
+  &-flow-8 > :not(:last-child):not([class*="-stack"]) {
     margin-bottom: $spacing-8;
   }
-  &-flow-16 > :not(:last-child) {
+  &-flow-16 > :not(:last-child):not([class*="-stack"]) {
     margin-bottom: $spacing-16;
   }
-  &-flow-24 > :not(:last-child) {
+  &-flow-24 > :not(:last-child):not([class*="-stack"]) {
     margin-bottom: $spacing-24;
   }
-  &-flow-32 > :not(:last-child) {
+  &-flow-32 > :not(:last-child):not([class*="-stack"]) {
     margin-bottom: $spacing-32;
   }
 

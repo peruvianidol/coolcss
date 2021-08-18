@@ -1,0 +1,13 @@
+---
+component: "Heading 1"
+order: 1
+---
+{% set meta %}
+{{ tokens.text['800'].fontSize.comments }} / {{ tokens.text['800'].lineHeight.comments }}
+{% endset %}
+
+{% set html %}
+<p class="{{ framework.prefix }}-heading-1">‘Maybe I Should Take Up Kayaking,’ Reports Last Flickering Ember Of Man’s Interest In Personal Growth</p>
+{% endset %}
+
+{% include "code.njk" %}

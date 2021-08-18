@@ -4,12 +4,10 @@
   "description": "The last CSS framework I'll (hopefully) ever need to build.",
   "main": "index.html",
   "scripts": {
-    "watch:sass": "sass --no-source-map --watch _src/sass:_src/css",
-    "watch:css": "postcss _src/css/*.css --watch -u autoprefixer --dir _site/css --no-map",
+    "watch:sass": "sass --watch _src/assets/scss:_site/assets/css --no-source-map",
+    "build:sass": "sass _src/assets/scss:_site/assets/css --no-source-map",
     "watch:eleventy": "eleventy --serve",
-    "build:sass": "sass --no-source-map _src/sass:_src/css",
     "build:eleventy": "eleventy",
-    "postbuild": "postcss _site/css/*.css -r -u autoprefixer cssnano --no-map",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:*"
   },

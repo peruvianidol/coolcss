@@ -1,3 +1,6 @@
+[class*="#{$prefix}-heading"] {
+  font-weight: $heading-font-weight;
+}
 .#{$prefix} {
   &-heading-1 {
     font-size: $heading-1-font-size;
@@ -27,6 +30,10 @@
     font-size: $text-small-font-size;
     line-height: $text-small-line-height;
   }
+  &-text-tiny {
+    font-size: $text-tiny-font-size;
+    line-height: $text-tiny-line-height;
+  }
   &-text-subdued {
     color: $color-text-subdued;
   }
@@ -36,7 +43,7 @@
   &-text-strong {
     font-weight: $font-weight-semibold;
   }
-}
-a.#{$prefix}-text-inherit {
-  color: inherit;
+  &-text-inherit {
+    color: inherit;
+  }
 }

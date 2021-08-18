@@ -2,36 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
   <meta name="description" content="{{ site.description }}">
-  <link rel="stylesheet" href="{{ '/css/site.css' | url }}">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😎</text></svg>">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
+  <link rel="icon" href="{{ site.favicon }}">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet"> 
+  <script src="https://cdn.usefathom.com/script.js" data-site="ETKOGQJU" defer></script>
 </head>
-<body class="cool-styles cool-layout-two-column-aside-main">
+<body class="cool-styles cool-layout-single-column">
   <header data-grid-area="header">
-    <h1 class="cool-heading-1"><a href="/" class="">😎 cool.css</a></h1>
+    <h1 class="cool-heading-1"><a href="/" class="cool-text-inherit">😎 cool.css</a></h1>
   </header>
 
-  <aside data-grid-area="aside">
-    <nav>
-      <ul class="cool-nav-list" role="list">
-        <li><a href="/kitchen-sink/">Kitchen Sink</a></li>
-      </ul>
-    </nav>
-  </aside>
+  <nav>
+    <ul>
+      <li><a href="/foundations/color/">Color</a></li>
+      <li><a href="/components/type/">Type</a></li>
+    </ul>
+  </nav>
 
-  <main data-grid-area="main">
-    {% if title %}<h2 class="cool-heading-2 cool-stack-16">{{ title }}</h2>{% endif %}
+  <main data-grid-area="main" class="{{ framework.prefix }}-flow-16">
+    {% if title !== "Home" %}<h2 class="{{ framework.prefix }}-heading-1 {{ framework.prefix }}-stack-16">{{ title }}</h2>{% endif %}
 
     {{ content | safe }}
   </main>
   <footer data-grid-area="footer" class="cool-space-between">
     <p>Made with ❤️ by <a href="https://mikeaparicio.com">Mike Aparicio</a></p>
-    <a href="https://github.com/peruvianidol/coolcss">Contribute on Github</a>
+    <a href="https://github.com/peruvianidol/coolcss">Github</a>
   </footer>
 </body>
 </html>

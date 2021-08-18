@@ -1,0 +1,14 @@
+---
+component: "Heading 2"
+order: 2
+---
+
+{% set meta %}
+{{ tokens.text['700'].fontSize.comments }} / {{ tokens.text['700'].lineHeight.comments }}
+{% endset %}
+
+{% set html %}
+<h2 class="{{ framework.prefix }}-heading-2">Senate Passes Bill Wishing Younger Generations Best Of Luck Stopping Climate Change</h2>
+{% endset %}
+
+{% include "code.njk" %}

@@ -1,0 +1,13 @@
+---
+component: "Text Large"
+order: 5
+---
+{% set meta %}
+{{ tokens.text['500'].fontSize.comments }} / {{ tokens.text['500'].lineHeight.comments }}
+{% endset %}
+
+{% set html %}
+<p class="{{ framework.prefix }}-text-large">NEW ORLEANS—Having been informed by friends that such an item of clothing was essential in the Pacific Northwest, area man Walter Katrakis told reporters Friday he was shopping around for a nice fire-resistant jacket in anticipation of his move to Portland, OR.</p>
+{% endset %}
+
+{% include "code.njk" %}

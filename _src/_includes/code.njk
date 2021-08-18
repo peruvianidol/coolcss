@@ -1,0 +1,16 @@
+<article class="{{ framework.prefix }}-flow-16 {{ framework.prefix }}-stack-32">
+  <p class="{{ framework.prefix }}-stack-8"><strong class="{{ framework.prefix }}-inline-8">{{ component }}</strong>{% if meta %}<span class="{{ framework.prefix }}-text-subdued">{{ meta }}</span>{% endif %}</p>
+
+  {% if description %}
+  {{ description | safe }}
+  {% endif %}
+
+  {{ html | safe }}
+
+  <details>
+    <summary>HTML</summary>
+    {% highlight "html" -%}
+    {{- html | safe -}}
+    {%- endhighlight %}
+  </details>
+</article>

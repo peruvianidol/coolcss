@@ -1,0 +1,13 @@
+---
+component: "Text Error"
+---
+
+{% set description %}
+<p>Use <code>.{{ framework.prefix }}-text-error</code> to indicate error text or draw attention to content. Use sparingly.</p>
+{% endset %}
+
+{% set html %}
+<p class="{{ framework.prefix }}-text-error">This is error text.</p>
+{% endset %}
+
+{% include "code.njk" %}

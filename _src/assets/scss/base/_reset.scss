@@ -15,17 +15,15 @@
 
 .#{$prefix}-styles {
   text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   &:focus-within {
     scroll-behavior: smooth;
   }
 
-  a[class] {
+  :where(a[class]:not([class*="text-inherit"])) {
     text-decoration: none;
-  }
-
-  a:not([class]) {
-    text-decoration-skip-ink: auto;
   }
 
   ul[role="list"],

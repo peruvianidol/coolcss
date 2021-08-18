@@ -20,21 +20,20 @@ $color-red-600: hsl(350, 75%, 37%); // #a6172f
 $color-red-400: hsl(350, 75%, 62%); // #e7556e
 $color-red-200: hsl(350, 75%, 87%); // #f7c5cd
 
-$heading-1-font-size: 2.5rem;
-$heading-1-line-height: 3rem;
-$heading-2-font-size: 2rem;
-$heading-2-line-height: 2.5rem;
-$heading-3-font-size: 1.5rem;
-$heading-3-line-height: 2rem;
-$heading-4-font-size: 1.25rem;
-$heading-4-line-height: 1.875rem;
-
-$text-large-font-size: 1.25rem;
-$text-large-line-height: 1.875rem;
-$text-medium-font-size: 1rem;
-$text-medium-line-height: 1.5rem;
-$text-small-font-size: .875rem;
-$text-small-line-height: 1.25rem;
+$text-800-font-size: 2.5rem; // 40px
+$text-800-line-height: 3rem; // 48px
+$text-700-font-size: 2rem; //32px
+$text-700-line-height: 2.5rem; // 40px
+$text-600-font-size: 1.5rem; // 24px
+$text-600-line-height: 2rem; //32px
+$text-500-font-size: 1.25rem; // 20px
+$text-500-line-height: 1.875rem; // 30px
+$text-400-font-size: 1rem; // 16px
+$text-400-line-height: 1.5rem; // 24px
+$text-300-font-size: .875rem; // 14px
+$text-300-line-height: 1.25rem; // 20px
+$text-200-font-size: .75rem; // 12px
+$text-200-line-height: 1rem; // 16px
 
 $font-family: Rubik, sans-serif;
 
@@ -47,6 +46,13 @@ $spacing-16: 1rem;
 $spacing-24: 1.5rem;
 $spacing-32: 2rem;
 $spacing-64: 4rem;
+
+$border-width-default: 1px;
+$border-width-thick: 2px;
+$border-radius-small: 2px;
+$border-radius-medium: 4px;
+
+$shadow-focus: 0 0 .35em -.1em $color-blue-400;
 
 $max-line-length: 75ch;
 $sidebar-width: 200px;
@@ -74,16 +80,29 @@ $color-border-input: $color-gray-600;
 $color-border-focus: $color-blue-400;
 $color-border-disabled: $color-gray-400;
 
-$border-width-default: 1px;
-$border-width-thick: 2px;
-
-$border-radius-small: 2px;
-$border-radius-medium: 4px;
-
-$shadow-focus: 0 0 .35em -.1em $color-border-focus;
 
 
 // Component Tokens
+
+$heading-font-weight: $font-weight-semibold;
+
+$heading-1-font-size: $text-800-font-size;
+$heading-1-line-height: $text-800-line-height;
+$heading-2-font-size: $text-700-font-size;
+$heading-2-line-height: $text-700-line-height;
+$heading-3-font-size: $text-600-font-size;
+$heading-3-line-height: $text-600-line-height;
+$heading-4-font-size: $text-500-font-size;
+$heading-4-line-height: $text-500-line-height;
+
+$text-large-font-size: $text-500-font-size;
+$text-large-line-height: $text-500-line-height;
+$text-medium-font-size: $text-400-font-size;
+$text-medium-line-height: $text-400-line-height;
+$text-small-font-size: $text-300-font-size;
+$text-small-line-height: $text-300-line-height;
+$text-tiny-font-size: $text-200-font-size;
+$text-tiny-line-height: $text-200-line-height;
 
 $form-label-font-weight: $font-weight-semibold;
 $form-label-margin: $spacing-4;

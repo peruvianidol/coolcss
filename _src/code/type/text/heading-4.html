@@ -1,0 +1,14 @@
+---
+component: "Heading 4"
+order: 4
+---
+
+{% set meta %}
+{{ tokens.text['500'].fontSize.comments }} / {{ tokens.text['500'].lineHeight.comments }}
+{% endset %}
+
+{% set html %}
+<h4 class="{{ framework.prefix }}-heading-4">Juilliard Opens Business School For Students Who Realize Acting Thing Probably A Long Shot</h4>
+{% endset %}
+
+{% include "code.njk" %}

@@ -1,0 +1,31 @@
+---
+title: Color
+date: Last Modified
+---
+
+<p>Last Updated: {{ page.date | postDate }}</p>
+
+<div class="palette">
+{% for color, results in tokens.color %}
+  {% if results.value %}
+    <figure>
+      <div style="background-color: {{ results.comments}}"{% if color === "white" %} class="{{ framework.prefix}}-bordered"{% endif %}></div>
+      <figcaption>
+        <p class="cool-heading-4">${{color}}</p>
+        <p class="cool-text-subdued">{{ results.value }}<br>
+        {{ results.comments }}</p>
+      </figcaption>
+    </figure>
+  {% else %}
+    {% for subcolor, values in results %}
+      <figure>
+        <div style="background-color: {{ values.comments}}"></div>
+        <figcaption>
+          <p class="cool-heading-4">${{color}}-{{subcolor}}</p>
+          <p class="cool-text-subdued">{{ values.value }}<br>
+          {{ values.comments }}</p>
+        </figcaption>
+      </figure>
+    {% endfor %}
+  {% endif %}
+{% endfor %}

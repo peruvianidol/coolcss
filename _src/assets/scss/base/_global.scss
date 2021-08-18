@@ -12,9 +12,10 @@
     width: 100%;
   }
 
-  a {
+  :where(a) {
     color: $color-text-interactive;
     text-underline-offset: 2px;
+    text-decoration-skip-ink: auto;
     
     &:hover {
       color: $color-text-interactive-hover;
@@ -35,24 +36,13 @@
     color: $color-text-inverse;
     padding: $spacing-16;
     border-radius: $border-radius-medium;
-  }
-  blockquote {
-    padding: $spacing-16 $spacing-32;
-    font-size: $text-large-font-size;
-    line-height: $text-large-line-height;
-    border: solid $color-border-default;
-    border-width: $border-width-default 0;
+    white-space: pre-line;
   }
   table {
     border-collapse: collapse;
   }
   th, caption {
     text-align: left;
-  }
-  figcaption {
-    font-size: $text-medium-font-size;
-    line-height: $text-medium-line-height;
-    padding: $spacing-4 0;
   }
   ul, ol {
     padding-left: 1em;

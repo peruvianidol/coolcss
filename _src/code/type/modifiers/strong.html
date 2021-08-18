@@ -1,0 +1,13 @@
+---
+component: "Text Strong"
+---
+
+{% set description %}
+<p>Use <code>.{{ framework.prefix }}-text-strong</code> or the <code>&lt;strong&gt;</code> tag to increase the font weight of a section of text for added emphasis.</p>
+{% endset %}
+
+{% set html %}
+<p class="{{ framework.prefix }}-text-strong">This text is strong.</p>
+{% endset %}
+
+{% include "code.njk" %}

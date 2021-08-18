@@ -1,0 +1,13 @@
+---
+component: "Text Medium"
+order: 6
+---
+{% set meta %}
+{{ tokens.text['400'].fontSize.comments }} / {{ tokens.text['400'].lineHeight.comments }}
+{% endset %}
+
+{% set html %}
+<p class="{{ framework.prefix }}-text-medium">CHESANING, MI—Noting that it was her right as an American citizen to decide when and where she would urinate and defecate, 3-year-old Madison Ackrite told reporters Wednesday that she was simply exercising her constitutionally guaranteed freedom of choice when she refused to use the potty.</p>
+{% endset %}
+
+{% include "code.njk" %}

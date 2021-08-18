@@ -1,0 +1,13 @@
+---
+component: "Text Tiny"
+order: 8
+---
+{% set meta %}
+{{ tokens.text['200'].fontSize.comments }} / {{ tokens.text['200'].lineHeight.comments }}
+{% endset %}
+
+{% set html %}
+<p class="{{ framework.prefix }}-text-tiny">NEW YORK—Looking to reverse a decades-long decline relative to football, the MLB revealed Wednesday that they are hoping a partnership with Barstool Sports can help restore baseball’s stature as America’s nationalist pastime.</p>
+{% endset %}
+
+{% include "code.njk" %}

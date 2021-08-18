@@ -1,0 +1,16 @@
+---
+title: Type
+date: Last Modified
+---
+
+<p>Last Updated: {{ page.date | postDate }}</p>
+
+{% for code in collections.text %}
+  {{ code.templateContent | safe }}
+{% endfor %}
+
+<h3 class="{{ framework.prefix }}-heading-2 {{ framework.prefix }}-stack-16">Modifying type styles</h3>
+
+{% for code in collections.modifiers %}
+  {{ code.templateContent | safe }}
+{% endfor %}

@@ -1,4 +1,3 @@
 {
-  "layout": "base.njk",
-  "permalink": "{% if title %}/{{ title | slug }}{% endif %}/index.html"
+  "layout": "base.njk"
 }

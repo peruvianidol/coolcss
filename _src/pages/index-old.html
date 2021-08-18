@@ -1,0 +1,159 @@
+---
+title: Old
+---
+
+<article class="cool-flow-24">
+  <h2 class="cool-heading-3">The last CSS framework I'll (hopefully) ever have to build.</h2>
+
+  <p>Between <a href="https://www.mikeaparicio.com/posts/2020-07-23-goodbye-groupon/">switching jobs</a> and starting <a href="https://11ty.recipes/">a bunch</a> of <a href="https://dogsof.dev/">side-projects</a>, I've found myself re-writing a lot of CSS in the past year. Wouldn't it be nice, I thought, if I could just write one CSS framework and use it on any project? <strong>cool.css</strong> is my attempt to do just that.</p>
+
+  <h4 class="cool-heading-4">Just what the world needs&mdash;another fucking CSS framework!</h4>
+
+  <p>Yes, I know. I feel the same way.</p>
+  
+  <p>Dave Rupert once advocated for <a href="https://daverupert.com/2013/04/responsive-deliverables/">tiny Bootstraps, for every client</a>, which is something that stuck with me. Why use a CSS framework that's going to add a bunch of stuff you're not going to use and require customizations and overrides on top of a bunch of new styles that are specific to your needs?</p>
+
+  <p>This is why I've made custom CSS frameworks for every project, including three CSS frameworks at Groupon for their consumer, merchant and internal tools products.</p>
+
+  <p>As I've dived deeper into design systems work, I wanted to support those systems with a CSS framework that was:</p>
+
+  <ul>
+    <li>Lightweight</li>
+    <li>Stack agnostic</li>
+    <li>Easy to use</li>
+    <li>Easy to maintain</li>
+    <li>Fully customizable/themable</li>
+    <li>Built with accessibility and performance in mind</li>
+    <li>Required little to no page/app-specific CSS to be written by developers</li>
+  </ul>
+
+  <h3 class="cool-heading-3">The COOL Methodology</h3>
+
+  <p>Each new framework I had made over the years built on hard lessons learned from the last. One of the biggest issues that always eluded me was that no matter how good I made the framework, developers would always build their own styles on top of the framework, to varying degrees of success.</p>
+
+  <p>Eventually my process evolved into its own methodology, combining parts of <a href="http://smacss.com/">SMACCS</a>, <a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a>, <a href="https://tailwindcss.com/">Tailwind</a> and <a href="https://cube.fyi/">CUBE CSS</a>, into something that just about does everything I want it to do.</p>
+
+  <p>The <strong>COOL</strong> methodology includes three types of styles.</p>
+
+  <dl>
+    <dt>Component Styles</dt>
+    <dd class="cool-stack-16">Individual components are styled to be used in any context and composed into larger components using utility styles.</dd>
+
+    <dt>Utility Styles <span>(The OO in COOL)</span></dt>
+    <dd class="cool-stack-16">These single-purpose classes allow you to compose multiple components in any number of ways without having to re-declare styles in different contexts.</dd>
+
+    <dt>Layout Styles</dt>
+    <dd class="cool-stack-16">Rather than using a generic 12-column grid, a number of pre-defined layouts are provided (using CSS grid) that can be used to organize pages of content.</dd>
+  </dl>
+
+  <h3 class="cool-heading-3">COOL principles, bruh</h3>
+
+  <p>The COOL methodology is based on a few principles.</p>
+
+  <h4 class="cool-heading-4">Everything is scoped to the framework</h4>
+
+  <p>A lot of frameworks apply styles directly to HTML elements like <code>&lt;body&gt;</code>. This is fine if you're starting a new project, but if you're coming into an existing project with legacy styles, introducing a framework can cause conflicts with those styles.</p>
+
+  <p><strong>cool.css</strong> has a <code>$prefix</code> token that's appended to every selector in the framework. Styles which would otherwise be added directly to an element are instead scoped within a global class, <code>.#{$prefix}-styles</code>. (The default value of <code>$prefix</code> is "cool", so <code>.cool-styles</code>) You can apply this class to the body or, if you're slowly introducing the framework to an existing site, you can add it to a parent container where you want to use the framework.</p>
+
+  <h4 class="cool-heading-4">A minimal reset</h4>
+
+  <p>Resets like <a href="https://meyerweb.com/eric/tools/css/reset/">CSS Reset</a> or <a href="https://necolas.github.io/normalize.css/">normalize.css</a> are great for making things look the same across all browsers, but often require you to redeclare basic styles for each element. Besides that, browsers have improved over the years to the point where they aren't strictly necessary.</p>
+
+  <p><strong>cool.css</strong> takes a slightly different approach, based largely on Andy Bell's <a href="https://piccalil.li/blog/a-modern-css-reset">Modern CSS Reset</a>.</p>
+
+  <p>In addition, <strong>cool.css</strong> resets margins and (some) padding defaults. Having default margins on header elements, for example, often requires developers to override the margin in different contexts. Instead, <strong>cool.css</strong> encourages the use of utility classes for controlling margins between elements.</p>
+
+  <p><strong>cool.css</strong> also sets font properties to inherit. This encourages developers using the framework to select elements like headers semantically and use classes for applying visual styles, rather than selecting an <code>&lt;h2&gt;</code> because it's visually bigger than an <code>&lt;h3&gt;</code>, for example.</p>
+
+  <h4 class="cool-heading-4">Not utility-first but utility-also</h4>
+
+  <p>Pure utility frameworks like Tailwind have their advantages. However, I have two issues with them.</p>
+
+  <ol class="cool-flow-16">
+    <li><p>They offset composition of visual styles from CSS to HTML. Before CSS, we had a limited number of HTML attributes that allowed us to add visual styling to elements. When CSS came around there was this whole movement around "separation of concerns". Utility frameworks basically take us back to that time of declaring all of our visual styles in the markup, only we're able to customize those styles in the CSS rather than leaving it up to the browser. It doesn't make it any easier for developers to make the website look like the picture of a website the designer gave them.</p></li>
+
+    <li><p>They let you combine any number of styles. Design systems require a fine balance between consistent visual style and allowing the flexibility to design new features. What we don't want is for developers (or designers, for that matter) to use any combination of colors in the palette for text, backgrounds, borders, etc.</p></li>
+  </ol>
+
+  <figure class="cool-half-width cool-right">
+    <img src="/images/wtf-tailwind.jpg" width="800" height="" alt="Mike's exaggerated social thumbnail">
+    <figcaption>
+      Smash that like button and subscribe!
+    </figcaption>
+  </figure>
+
+  <p><strong>cool.css</strong> features a lot of helpful utility classes, but they are less about styling individual atomic components more for applying variations to default styles or arranging those components into larger molecules/organisms.</p>
+
+  <p>The goal is that you should be able to build any design without having to add additional styles.</p>
+
+  <h4 class="cool-heading-4">Let the C in CSS do its thing</h4>
+
+  <p>Fun fact: the C in CSS stands for cascade. Methodolgies like BEM, in an effort to encapsulate styles, often result in having overly-specific selectors and a lot of redundant style declarations.</p>
+
+  <p>Take a card component, for example. It's pretty common to see a card marked up like:</p>
+
+<pre>
+.card
+  .card--image
+  .card--body
+    .card--title
+    .card--subtitle
+    .card--button-cta
+</pre>
+
+  <p>Is all that really necessary? Do styles for a title have to be scoped to a card? Or can we just have <code>.card</code> define the container and use more generic, reusable styles inside of it?</p>
+
+<pre>
+.card
+  img
+  figcaption
+    .heading-3
+    .text-medium.text-subdued
+    .button-primary
+</pre>
+
+  <p>By limiting how often we declare the same styles in different contexts, we can greatly reduce the amount of CSS and markup required to design new product features and complex components.</p>
+
+  <h4 class="cool-heading-4">The 12-column grid is dead, long live the 12-column grid</h4>
+
+  <p>CSS frameworks have made the 12-column grid ubiquitous. These grids were born from a desire to mimic print designs. But we're not Swiss Modernists, we're just making websites, y'all.</p>
+
+  <p>These grid systems allow you to compose elements in any combination of ways, but usually we're just using halves or quarters, or dividing a number of elements equally across the available space. You don't need the overhead of a grid system to do that.</p>
+
+  <p><strong>cool.css</strong> includes utility classes for simple flexbox and grid layouts for components, as well as common, responsive layout patterns for pages. Remember the Holy Grail layout? That's like 90% of pages right there. You don't need a 12-column grid system to make that.</p>
+
+  <h4 class="cool-heading-4">Powered by design tokens</h4>
+
+  <p><strong>cool.css</strong> is easily themable thanks to three levels of design tokens:</p>
+
+  <ul class="cool-flow-16">
+    <li><strong>Global Tokens</strong> include all of the possible values in the system. The color palette, type scale, spacing values, etc. If we want to change the value of our brand color, we can do that here and it will change everywhere that token is used.</p></li>
+
+    <li><strong>Contextual tokens</strong> describe how Global Tokens are used. They include common values that are used across multiple components, such as <code>$color-background-brand</code>. Contextual Tokens allow us to change from one Global Token value to another across multiple components.</p>
+
+    <li><strong>Component tokens</strong> are values specific to a single component and can point to Contextual Tokens, Global Tokens, or even one-off values. Component Tokens allow us to make changes to a single component — changing the background color of the CTA button from green to blue, for example — without having to edit any CSS.</p>
+  </ul>
+
+  <h4 class="cool-heading-4">Stack agnostic</h4>
+
+  <p><strong>cool.css</strong> is built with <a href="https://sass-lang.com/">Sass</a> but you don't necessarily even have to use Sass to use <strong>cool.css</strong>. You can just as easily add the compiled CSS to any project.</p>
+
+  <h3 class="cool-heading-3">Making CSS cool</h3>
+  
+  <p>I've worked with so many developers who struggle with CSS. The methodology I've used over the years in building custom CSS frameworks for different projects and companies has helped accelerate the process of getting ideas from concept to production.</p>
+
+  <p><strong>Devs love it</strong> because it greatly reduces the amount of time they spend writing CSS.</p>
+
+  <p><strong>Designers love it</strong> because the finished product ends up looking like their design with a lot less back and forth.</p>
+
+  <p><strong>Managers and other stakeholders love it</strong> because it frees up their teams to focus on the things they're good at.</p>
+
+  <p><strong>cool.css</strong> is not meant to compete with frameworks like Bootstrap or Tailwind. It's mostly a tool for me to quickly port common patterns between projects and make them visually distinct using design tokens. If you get some use out of the framework or the ideas of the COOL methodology, I'd love to hear about it. If you have constructive feedback I'd also love to hear it!</p>
+
+  <figure>
+    <video preload="auto" aria-label="Embedded video" src="/images/coolcss.mp4" poster="/images/coolcss.jpg" type="video/mp4" playsinline autoplay disablePictureInPicture loop muted></video>
+    <figcaption class="cool-text-medium">This incredible GIF by <a href="https://twitter.com/CoreyGinnivan/status/1074287131374145536">Corey Ginnivan</a></figcaption>
+  </figure>
+
+</article>

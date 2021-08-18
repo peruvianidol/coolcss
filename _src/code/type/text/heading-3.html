@@ -1,0 +1,14 @@
+---
+component: "Heading 3"
+order: 3
+---
+
+{% set meta %}
+{{ tokens.text['600'].fontSize.comments }} / {{ tokens.text['600'].lineHeight.comments }}
+{% endset %}
+
+{% set html %}
+<h3 class="{{ framework.prefix }}-heading-3">Man In Splashy Floral Print Wastes Everyone’s Time By Not Having Any Drugs On Him</h3>
+{% endset %}
+
+{% include "code.njk" %}

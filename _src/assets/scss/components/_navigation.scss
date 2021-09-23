@@ -1,3 +1,5 @@
+@use '../abstracts/tokens' as *;
+
 .#{$prefix}-nav-list {
   margin: 0;
 

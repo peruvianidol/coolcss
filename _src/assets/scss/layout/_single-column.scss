@@ -1,3 +1,5 @@
+@use '../abstracts/tokens' as *;
+
 .#{$prefix}-layout-single-column {
   max-width: $container-max-width;
   margin: 0 auto;

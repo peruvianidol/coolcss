@@ -1,3 +1,5 @@
+@use '../abstracts/tokens' as *;
+
 @media (min-width: $breakpoint-medium) {
   .#{$prefix} {
     &-left {

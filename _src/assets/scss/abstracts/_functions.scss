@@ -1,10 +1,14 @@
+@use "sass:color";
+@use "sass:meta";
+@use "sass:string";
+
 // URL encode a color value
 // https://gist.github.com/certainlyakey/e9c0d8f5c87ff47e3d5b
 
 @function encodecolor($string) {
-  @if type-of($string) == 'color' and str-index(#{$string}, '#') == 1 {
-    $hex: str-slice(ie-hex-str($string), 4);
-    $string: unquote('#{$hex}');
+  @if meta.type-of($string) == 'color' and string.index(#{$string}, '#') == 1 {
+    $hex: string.slice(color.ie-hex-str($string), 4);
+    $string: string.unquote('#{$hex}');
 
     @return '%23' + $string;
   }

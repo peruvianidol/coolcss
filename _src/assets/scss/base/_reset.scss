@@ -1,3 +1,5 @@
+@use '../abstracts/tokens' as *;
+
 .#{$prefix}-styles,
 .#{$prefix}-styles *,
 .#{$prefix}-styles *::before,

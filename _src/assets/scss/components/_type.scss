@@ -1,3 +1,5 @@
+@use '../abstracts/tokens' as *;
+
 [class*="#{$prefix}-heading"] {
   font-weight: $heading-font-weight;
 }

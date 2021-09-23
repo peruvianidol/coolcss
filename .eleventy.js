@@ -11,17 +11,22 @@ module.exports = function (eleventyConfig) {
   // Add syntax highlighting
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  // open a browser window on --watch
-  eleventyConfig.setBrowserSyncConfig({
-    open: true,
-  });
-
   // shortcode for inserting the current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   
   // convert date to [Month DD, YYYY], set timezone to UTC to ensure date is not off by one
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, {zone: 'America/Chicago'}).toLocaleString(DateTime.DATE_FULL);
+  });
+
+  // add anchor links to heading text
+  eleventyConfig.addPairedShortcode("anchor", function(content) {
+    return `
+    <h3 class="cool-heading-2">
+    <a id="${eleventyConfig.getFilter('slug')(content)}" href="#${eleventyConfig.getFilter('slug')(content)}" class="cool-anchor" aria-hidden="true">
+    ${content}
+    </a>
+    </h3>`
   });
 
   return {

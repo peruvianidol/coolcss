@@ -1,3 +1,5 @@
+@use '../abstracts/tokens' as *;
+
 [class*="#{$prefix}-flex-row"],
 [class*="#{$prefix}-space-between"] {
   display: flex;

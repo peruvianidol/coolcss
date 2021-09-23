@@ -59,6 +59,9 @@ $sidebar-width: 200px;
 $container-max-width: calc(#{$sidebar-width} + #{$max-line-length});
 $breakpoint-medium: 700px;
 
+$animation-duration: .2s;
+$animation-timing-function: ease-in-out;
+
 // Contextual Tokens
 
 $color-text-body: $color-gray-800;

@@ -1,0 +1,22 @@
+@use '../abstracts/tokens' as *;
+
+.#{$prefix}-anchor {
+  position: relative;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    &:before {
+      opacity: 1;
+    }
+  }
+  &:before {
+    content: "#";
+    position: absolute;
+    right: 100%;
+    padding-right: $spacing-4;
+    display: block;
+    transition: $animation-duration opacity $animation-timing-function;
+    opacity: 0;
+    color: $color-text-interactive;
+  }
+}

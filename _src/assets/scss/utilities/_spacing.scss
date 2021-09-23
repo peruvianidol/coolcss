@@ -1,3 +1,5 @@
+@use '../abstracts/tokens' as *;
+
 .#{$prefix} {
   &-flow-4 > :not(:last-child):not([class*="-stack"]) {
     margin-bottom: $spacing-4;

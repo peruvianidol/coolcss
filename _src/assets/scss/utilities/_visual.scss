@@ -1,3 +1,5 @@
+@use '../abstracts/tokens' as *;
+
 .#{$prefix} {
   &-bordered {
     border: $border-width-default solid $color-border-default;

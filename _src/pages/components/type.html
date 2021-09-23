@@ -9,7 +9,9 @@ date: Last Modified
   {{ code.templateContent | safe }}
 {% endfor %}
 
-<h3 class="{{ framework.prefix }}-heading-2 {{ framework.prefix }}-stack-16">Modifying type styles</h3>
+{% anchor %}Modifying type styles{% endanchor %}
+
+{# <h3 class="{{ framework.prefix }}-heading-2 {{ framework.prefix }}-stack-16">Modifying type styles</h3> #}
 
 {% for code in collections.modifiers %}
   {{ code.templateContent | safe }}

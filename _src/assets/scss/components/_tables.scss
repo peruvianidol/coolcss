@@ -1,3 +1,5 @@
+@use '../abstracts/tokens' as *;
+
 .#{$prefix} {
   &-table {
     --label-min-width: 100px;

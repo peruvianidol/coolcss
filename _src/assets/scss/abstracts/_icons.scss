@@ -1,4 +1,5 @@
 @use '../abstracts/tokens' as *;
+@use '../abstracts/functions' as *;
 
 $arrow-color: encodecolor($color-icon-default);
 

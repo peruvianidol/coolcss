@@ -26,12 +26,13 @@
 
   code {
     display: inline-block;
-    font-size: .875em;
-    line-height: 1.5em;
-    color: $color-text-inverse;
-    background-color: $color-gray-800;
+    font-size: $text-small-font-size;
+    line-height: inherit;
+    font-weight: $font-weight-semibold;
+    color: $color-text-body;
+    background-color: $color-background-subdued;
     border-radius: $border-radius-medium;
-    padding: 0 $spacing-8;
+    padding: 0 $spacing-4;
   }
   pre {
     background-color: $color-gray-800;
@@ -47,6 +48,21 @@
     text-align: left;
   }
   ul, ol {
-    padding-left: 1em;
+    padding-left: $spacing-16;
+  }
+  summary {
+    font-weight: $font-weight-semibold;
+    color: $color-text-interactive;
+    cursor: pointer;
+    list-style: none;
+  }
+  details summary:before {
+    content: "\002b";
+    display: inline-block;
+    width: $spacing-16;
+    font-size: $text-large-font-size;
+  }
+  details[open] summary:before {
+    content: "\002d";
   }
 }

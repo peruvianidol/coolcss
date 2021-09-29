@@ -51,7 +51,7 @@
       }
     }
 
-    &:focus {
+    &:focus-visible {
       border-color: $color-border-focus;
       box-shadow: $shadow-focus;
       outline: $border-width-thick solid transparent;
@@ -93,7 +93,7 @@
         border-radius: $form-control-checkbox-radius;
       }
 
-      &:focus {
+      &:focus-visible {
         border-color: $color-border-focus;
         box-shadow: $shadow-focus;
         outline: $border-width-thick solid transparent;
@@ -120,6 +120,9 @@
           background-image: $icon-checkbox;
           background-size: $form-control-size-inner;
           background-position: 50% 50%;
+          &:checked {
+            color: white;
+          }
         }
       }
 
